@@ -1,0 +1,10 @@
+{
+  "data_uoa": "ck-mxnet",
+  "data_uid": "678494f8b520000f",
+  "data_alias": "ck-mxnet",
+  "data_name": "ck-mxnet",
+  "dict": {
+    "shared": "git",
+    "url": "https://github.com/ctuning/ck-mxnet"
+  }
+}
