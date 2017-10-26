@@ -23,14 +23,15 @@ Furthermore, we are now now developing a CK-powered crowd-tuning platform
 to continuously benchmark, optimize and co-design the whole AI stack (SW/HW/models) 
 across diverse platforms from mobile devices and IoT to supercomputers
 in terms of accuracy, execution time, power consumption, resource usage and other costs with the
-help of the community (see [public CK repo](http://cKnowledge.org/repo) and vision papers [1](https://arxiv.org/abs/1506.06256), [2](http://doi.acm.org/10.1145/2909437.2909449)).
+help of the community (see [public CK repo](http://cKnowledge.org/repo) 
+and vision papers [1](https://arxiv.org/abs/1506.06256), [2](http://doi.acm.org/10.1145/2909437.2909449)).
 
 
 ## Coordination of development
 
 * [cTuning Foundation](http://cTuning.org)
 * [dividiti](http://dividiti.com)
-* [University of Washnigton](http://www.uwashington.com)
+* [University of Washnigton](http://www.washington.com)
 
 ## Installation (Linux or Windows)
 
