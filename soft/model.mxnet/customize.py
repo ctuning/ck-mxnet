@@ -55,8 +55,6 @@ def setup(i):
     ck=i['ck_kernel']
     s=''
 
-    ck.save_json_to_file({'json_file':'d:\\xyz.json','dict':i, 'safe':'yes'})
-
     iv=i.get('interactive','')
 
     cus=i.get('customize',{})
