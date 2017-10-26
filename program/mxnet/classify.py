@@ -49,9 +49,9 @@ import cv2
 import numpy as np
 
 if gpu:
-   target=mx.cpu()
-else:
    target=mx.gpu()
+else:
+   target=mx.cpu()
 
 sym, arg_params, aux_params = mx.model.load_checkpoint(checkpoint, 0)
 mod = mx.mod.Module(symbol=sym, context=target, label_names=None)

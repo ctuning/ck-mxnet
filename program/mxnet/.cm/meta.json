@@ -36,7 +36,7 @@
           "no_tags": "vsrc",
           "skip_pruning_by_other_deps": "yes",
           "sort": 10,
-          "tags": "lib,mxnet"
+          "tags": "lib,mxnet,vcpu"
         },
         "mxnet-model": {
           "local": "yes",
@@ -64,7 +64,7 @@
           "no_tags": "vsrc",
           "skip_pruning_by_other_deps": "yes",
           "sort": 10,
-          "tags": "lib,mxnet"
+          "tags": "lib,mxnet,vcuda"
         },
         "mxnet-model": {
           "local": "yes",

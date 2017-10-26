@@ -18,9 +18,10 @@ def setup(i):
 
     ck=i['ck_kernel']
 
-    return ck.acces({'action':'run',
-                     'module_uoa':'script',
-                     'data_uoa':'720d42842c47ec84', # lib-mxnet-0.11.0-cpu
-                     'code':'custom',
-                     'func':'setup',
-                     'dict':i})
+    return ck.access({'action':'run',
+                      'module_uoa':'script',
+                      'script_module_uoa':'package',
+                      'data_uoa':'720d42842c47ec84', # lib-mxnet-0.11.0-cpu
+                      'code':'custom',
+                      'func':'setup',
+                      'dict':i})
