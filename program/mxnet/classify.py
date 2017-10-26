@@ -26,6 +26,7 @@ def predict(url):
     # print the top-5
     prob = np.squeeze(prob)
     a = np.argsort(prob)[::-1]
+
     print ('')
     for i in a[0:5]:
         print('probability=%f, class=%s' %(prob[i], labels[i]))
@@ -38,6 +39,7 @@ import sys
 checkpoint = sys.argv[1]
 labels = sys.argv[2]
 fname = sys.argv[3]
+gpu = (sys.argv[4]=='1')
 
 import matplotlib
 matplotlib.use('Agg')
@@ -46,8 +48,13 @@ import matplotlib.pyplot as plt
 import cv2
 import numpy as np
 
+if gpu:
+   target=mx.cpu()
+else:
+   target=mx.gpu()
+
 sym, arg_params, aux_params = mx.model.load_checkpoint(checkpoint, 0)
-mod = mx.mod.Module(symbol=sym, context=mx.cpu(), label_names=None)
+mod = mx.mod.Module(symbol=sym, context=target, label_names=None)
 mod.bind(for_training=False, data_shapes=[('data', (1,3,224,224))], 
          label_shapes=mod._label_shapes)
 mod.set_params(arg_params, aux_params, allow_missing=True)

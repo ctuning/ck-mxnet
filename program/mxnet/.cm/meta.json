@@ -22,7 +22,7 @@
         "run_cmd_main": "$<<CK_PYTHON_IPYTHON_BIN_FULL>>$"
       }
     },
-    "classify": {
+    "classify-cpu": {
       "dataset_tags": [
         "image",
         "jpeg",
@@ -47,7 +47,35 @@
         }
       },
       "run_time": {
-        "run_cmd_main": "$<<CK_ENV_COMPILER_PYTHON_FILE>>$ ../classify.py $<<CK_ENV_MODEL_MXNET_MODEL_FULL>>$ $<<CK_ENV_MODEL_MXNET_LABELS_FULL>>$ $#dataset_path#$$#dataset_filename#$"
+        "run_cmd_main": "$<<CK_ENV_COMPILER_PYTHON_FILE>>$ ../classify.py $<<CK_ENV_MODEL_MXNET_MODEL_FULL>>$ $<<CK_ENV_MODEL_MXNET_LABELS_FULL>>$ $#dataset_path#$$#dataset_filename#$ 0"
+      }
+    },
+    "classify-gpu": {
+      "dataset_tags": [
+        "image",
+        "jpeg",
+        "dataset"
+      ],
+      "ignore_return_code": "no",
+      "run_deps": {
+        "lib-mxnet": {
+          "local": "yes",
+          "name": "MXNet library",
+          "no_tags": "vsrc",
+          "skip_pruning_by_other_deps": "yes",
+          "sort": 10,
+          "tags": "lib,mxnet"
+        },
+        "mxnet-model": {
+          "local": "yes",
+          "name": "MXNet model",
+          "skip_pruning_by_other_deps": "yes",
+          "sort": 20,
+          "tags": "mxnetmodel"
+        }
+      },
+      "run_time": {
+        "run_cmd_main": "$<<CK_ENV_COMPILER_PYTHON_FILE>>$ ../classify.py $<<CK_ENV_MODEL_MXNET_MODEL_FULL>>$ $<<CK_ENV_MODEL_MXNET_LABELS_FULL>>$ $#dataset_path#$$#dataset_filename#$ 1"
       }
     }
   },
