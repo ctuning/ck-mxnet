@@ -6,16 +6,12 @@
 
 ## Introduction
 
-This repository is a part of our community initiative
-to [unify AI](http://cKnowledge.org/ai) 
+This repository is a part of our long-term community initiative
+to [unify AI](http://cKnowledge.org/ai) using [Collective Knowledge Framework](http://cKnowledge.org), 
+share AI engines, artifacts and workflows as reusable and customizable components,
 and help researchers survive in a Cambrian AI/SW/HW explosion:
 
 [![logo](http://cknowledge.org/images/ai-cloud-resize.png)](http://cKnowledge.org/ai)
-
-We are developing [high-level open Collective Knowledge JSON API](http://cKnowledge.org) 
-to existing AI frameworks (MXNet, [Caffe](https://github.com/dividiti/ck-caffe), 
-[Caffe2](https://github.com/ctuning/ck-caffe2),
-[TensorFlow](https://github.com/ctuning/ck-tensorflow), etc).
 
 CK allows to plug in various versions of AI frameworks together with libraries, compilers, tools, models, data sets 
 and other artifacts as unified and reusable components with JSON API, automate and customize their 
@@ -23,7 +19,7 @@ installation across Linux, Windows, MacOS and Android
 and provide extensible JSON API for common operations 
 such as prediction and training.
 
-Furthermore, we are now now actively developing a crowd-tuning mechanism
+Furthermore, we are now now developing a CK-powered crowd-tuning platform
 to continuously benchmark, optimize and co-design the whole AI stack (SW/HW/models) 
 across diverse platforms from mobile devices and IoT to supercomputers
 in terms of accuracy, execution time, power consumption, resource usage and other costs with the
