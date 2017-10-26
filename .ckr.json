@@ -5,6 +5,14 @@
   "data_name": "ck-mxnet",
   "dict": {
     "shared": "git",
-    "url": "https://github.com/ctuning/ck-mxnet"
+    "url": "https://github.com/ctuning/ck-mxnet",
+    "repo_deps": [
+      {
+        "repo_uoa": "ck-autotuning"
+      },
+      {
+        "repo_uoa": "ck-math"
+      }
+    ]
   }
 }

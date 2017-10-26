@@ -1,0 +1,33 @@
+{
+  "check_exit_status": "yes",
+  "customize": {
+    "extra_dir": "",
+    "install_env": {
+      "MXNET_MODEL": "resnet-152",
+      "MXNET_MODEL_JSON": "resnet-152-symbol.json",
+      "MXNET_URL_MODEL_JSON": "http://data.mxnet.io/models/imagenet-11k/resnet-152",
+      "MXNET_MODEL_PARAMS": "resnet-152-0000.params",
+      "MXNET_URL_MODEL_PARAMS": "http://data.mxnet.io/models/imagenet-11k/resnet-152",
+      "MXNET_MODEL_LABELS": "synset.txt",
+      "MXNET_URL_MODEL_LABELS": "http://data.mxnet.io/models/imagenet-11k"
+    },
+    "no_os_in_suggested_path": "yes",
+    "skip_file_check": "no",
+    "version": "resnet-152"
+  },
+  "end_full_path_universal": "resnet-152-0000.params",
+  "package_extra_name": " (mxnet, resnet-152)",
+  "process_script": "download",
+  "soft_uoa": "539416b3524c4795",
+  "suggested_path": "mxnetmodel",
+  "tags": [
+    "mxnetmodel",
+    "resnet",
+    "resnet-152",
+    "channel-stable"
+  ],
+  "use_scripts_from_another_entry": {
+    "data_uoa": "bedf9ae941734b48",
+    "module_uoa": "script"
+  }
+}
