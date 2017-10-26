@@ -44,7 +44,7 @@ echo ""
 echo "Downloading and installing TensorFlow prebuilt binaries (${TF_PYTHON_URL}) ..."
 echo ""
 
-${CK_PYTHON_PIP_BIN} install mxnet==${MXNET_PACKAGE_VER} -t ${INSTALL_DIR}/lib
+${CK_PYTHON_PIP_BIN} install mxnet${MXNET_EXTRA}==${MXNET_PACKAGE_VER} -t ${INSTALL_DIR}/lib
 if [ "${?}" != "0" ] ; then
   echo "Error: installation failed!"
   exit 1

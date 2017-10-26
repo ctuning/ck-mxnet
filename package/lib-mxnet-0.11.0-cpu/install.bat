@@ -30,7 +30,7 @@ echo.
 
 rem --ignore-installed 
 
-%CK_PYTHON_PIP_BIN% install mxnet==%MXNET_PACKAGE_VER% -t %INSTALL_DIR%\lib
+%CK_PYTHON_PIP_BIN% install mxnet%MXNET_EXTRA%==%MXNET_PACKAGE_VER% -t %INSTALL_DIR%\lib
 if %errorlevel% neq 0 (
  echo.
  echo Error: Failed instaling TF ...

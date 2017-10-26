@@ -65,6 +65,8 @@ def setup(i):
 
     winh=hosd.get('windows_base','')
 
+    ienv=cus.get('install_env',{})
+
     env=i['env']
     ep=cus['env_prefix']
 
@@ -79,5 +81,8 @@ def setup(i):
         s+='\nset PYTHONPATH='+pl+';%PYTHONPATH%\n'
     else:
         s+='\nexport PYTHONPATH='+pl+':${PYTHONPATH}\n'
+
+    for k in ienv:
+        env[k]=ienv[k]
 
     return {'return':0, 'bat':s}
