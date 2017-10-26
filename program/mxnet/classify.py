@@ -3,23 +3,19 @@
 # and updated to support CK (http://cKnowledge.org/ai)
 #
 
-import matplotlib.pyplot as plt
-import cv2
-import numpy as np
-
 def get_image(fname, show=False):
     # download and show the image
     img = cv2.cvtColor(cv2.imread(fname), cv2.COLOR_BGR2RGB)
+
     if img is None:
          return None
-    if show:
-         plt.imshow(img)
-         plt.axis('off')
+
     # convert into format (batch, RGB, width, height)
     img = cv2.resize(img, (224, 224))
     img = np.swapaxes(img, 0, 2)
     img = np.swapaxes(img, 1, 2)
     img = img[np.newaxis, :]
+
     return img
 
 def predict(url):
@@ -42,6 +38,13 @@ import sys
 checkpoint = sys.argv[1]
 labels = sys.argv[2]
 fname = sys.argv[3]
+
+import matplotlib
+matplotlib.use('Agg')
+
+import matplotlib.pyplot as plt
+import cv2
+import numpy as np
 
 sym, arg_params, aux_params = mx.model.load_checkpoint(checkpoint, 0)
 mod = mx.mod.Module(symbol=sym, context=mx.cpu(), label_names=None)

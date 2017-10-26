@@ -10,12 +10,11 @@
 # INSTALL_DIR
 # TENSORFLOW_URL
 
-export TENSORFLOW_LIB_DIR=${INSTALL_DIR}/lib
+export MXNET_LIB_DIR=${INSTALL_DIR}/lib
 
-######################################################################################
 echo ""
-echo "Removing '${TENSORFLOW_LIB_DIR}' ..."
-rm -rf ${TENSORFLOW_LIB_DIR}
+echo "Removing '${MXNET_LIB_DIR}' ..."
+rm -rf ${MXNET_LIB_DIR}
 
 ######################################################################################
 # Print info about possible issues
@@ -30,7 +29,13 @@ case "$x" in
   [nN][oO]|[nN])
     ;;
   *)
-    sudo ${CK_PYTHON_PIP_BIN} install --upgrade pip opencv-python easydict image joblib
+    sudo ${CK_PYTHON_PIP_BIN} install --upgrade pip
+    sudo ${CK_PYTHON_PIP_BIN} install requests matplotlib jupyter opencv-python
+    if [ "${CK_PYTHON_VER3}" == "YES" ] ; then
+      sudo apt-get install python3-tk
+    else
+      sudo apt-get install python-tk
+    fi 
     ;;
 esac
 
@@ -39,7 +44,7 @@ echo ""
 echo "Downloading and installing TensorFlow prebuilt binaries (${TF_PYTHON_URL}) ..."
 echo ""
 
-${CK_PYTHON_PIP_BIN} install --upgrade ${TF_PYTHON_URL} -t ${TENSORFLOW_LIB_DIR} --trusted-host storage.googleapis.com
+${CK_PYTHON_PIP_BIN} install mxnet==${MXNET_PACKAGE_VER} -t ${INSTALL_DIR}/lib
 if [ "${?}" != "0" ] ; then
   echo "Error: installation failed!"
   exit 1
