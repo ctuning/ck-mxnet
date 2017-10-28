@@ -85,10 +85,9 @@ and [ck-tensorrt](https://github.com/dividiti/ck-tensorrt).
 We now have a proof-of-concept to unify AI engines and artifacts to perform collaborative AI/SW/HW benchmarking, 
 optimization and co-design to help researchers select the most efficient solutions for their experiments 
 (see our [public Collective Knowledge repo](http://cKnowledge.org/repo) 
-and [vision paper](https://arxiv.org/abs/1506.06256)). We are now raising
-extra funding to extend our collaborative approach and crowdsource AI/SW/HW
-co-design across billions of diverse devices with the help of the community - 
-join [our community initiative](http://cKnowledge.org/ai) to know more.
+and [vision paper](https://arxiv.org/abs/1506.06256)). 
+Join [our long-term community initiative](http://cKnowledge.org/ai) 
+to crowdsource learning and AI/SW/HW co-design across billions of devices!
 
 ## Related Publications with long term vision
 
