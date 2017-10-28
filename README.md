@@ -7,25 +7,27 @@
 ## Introduction
 
 This repository is a part of our long-term community initiative
-to [unify AI](http://cKnowledge.org/ai) using [Collective Knowledge Framework](http://cKnowledge.org), 
-share AI engines, artifacts and workflows as reusable and customizable components,
-and help researchers survive in a Cambrian AI/SW/HW explosion:
+to [unify and automate AI](http://cKnowledge.org/ai) 
+using [Collective Knowledge Framework (CK)](http://cKnowledge.org).
 
-[![logo](http://cknowledge.org/images/ai-cloud-resize.png)](http://cKnowledge.org/ai)
+CK enables sharing of various AI engines and artifacts 
+as reusable, customizable and portable components 
+with a simple JSON API and meta information.
 
-CK allows to plug in various versions of AI frameworks together with libraries, compilers, tools, models, data sets 
-and other artifacts as unified and reusable components with JSON API, automate and customize their 
-installation across Linux, Windows, MacOS and Android 
-and provide extensible JSON API for common operations 
-such as prediction and training.
+CK also helps researchers quickly prototype 
+[portable AI workflows](https://github.com/ctuning/ck/wiki/Portable-workflows)
+by assembling together CK components similar to LEGO(tm), 
+plugging in various versions of AI frameworks together with 
+different libraries, compilers, tools, models and data sets,
+and automating and customizing their installation across 
+Linux, Windows, MacOS and Android.
 
-Furthermore, we are now now developing a CK-powered crowd-tuning platform
-to continuously benchmark, optimize and co-design the whole AI stack (SW/HW/models) 
-across diverse platforms from mobile devices and IoT to supercomputers
-in terms of accuracy, execution time, power consumption, resource usage and other costs with the
-help of the community (see [public CK repo](http://cKnowledge.org/repo) 
+Furthermore, such portable workflows can now be crowdsourced 
+across diverse platforms from IoT to supercomputers provided by volunteers 
+to enable practical and collaborative benchmarking, optimization and co-design of 
+the whole AI stack (SW/HW/models) in terms of accuracy, execution time, power consumption, 
+resource usage and other costs (see [public open CK repository](http://cKnowledge.org/repo) 
 and vision papers [1](https://arxiv.org/abs/1506.06256), [2](http://doi.acm.org/10.1145/2909437.2909449)).
-
 
 ## Coordination of development
 
