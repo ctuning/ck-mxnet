@@ -38,7 +38,7 @@ and vision papers [1](https://arxiv.org/abs/1506.06256), [2](http://doi.acm.org/
 
 * [cTuning Foundation](http://cTuning.org)
 * [dividiti](http://dividiti.com)
-* [University of Washnigton](http://www.washington.com)
+* [University of Washnigton](http://www.washington.edu)
 
 ## Installation (Linux or Windows)
 
