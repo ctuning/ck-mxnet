@@ -15,7 +15,6 @@ using [Collective Knowledge Framework (CK)](http://github.com/ctuning/ck/wiki).
 CK enables sharing of various AI engines and artifacts 
 as reusable, customizable and portable components 
 with a simple JSON API and meta information.
-
 CK also helps researchers quickly prototype 
 [portable AI workflows](https://github.com/ctuning/ck/wiki/Portable-workflows)
 by assembling together CK components similar to LEGO(tm), 
@@ -28,7 +27,7 @@ Linux, Windows, MacOS and Android
 [packages](https://github.com/ctuning/ck/wiki/Shared-packages) 
 and [software detection plugins](https://github.com/ctuning/ck/wiki/Shared-soft-descriptions)).
 
-Furthermore, such portable workflows can now be crowdsourced 
+Such portable workflows can now be crowdsourced 
 across diverse platforms from IoT to supercomputers provided by volunteers 
 to enable practical and collaborative benchmarking, optimization and co-design of 
 the whole AI stack (SW/HW/models) in terms of accuracy, execution time, power consumption, 
