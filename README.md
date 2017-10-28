@@ -1,4 +1,4 @@
-# Unification of collaborative benchmarking, optimization and experimentation of MXNet using Collective Knowledge workflow framework with common JSON API
+# Collective Knowledge repository for MXNet
 
 [![logo](https://github.com/ctuning/ck-guide-images/blob/master/logo-powered-by-ck.png)](https://github.com/ctuning/ck)
 [![logo](https://github.com/ctuning/ck-guide-images/blob/master/logo-validated-by-the-community-simple.png)](http://cTuning.org)
@@ -6,7 +6,9 @@
 
 ## Introduction
 
-This repository is a part of our long-term community initiative
+This repository provides high-level, portable and customizable workflows
+for [MXNet](http://mxnet.incubator.apache.org) 
+as a part of our long-term community initiative
 to [unify and automate AI](http://cKnowledge.org/ai) 
 using [Collective Knowledge Framework (CK)](http://github.com/ctuning/ck/wiki).
 
