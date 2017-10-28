@@ -8,7 +8,7 @@
 
 This repository is a part of our long-term community initiative
 to [unify and automate AI](http://cKnowledge.org/ai) 
-using [Collective Knowledge Framework (CK)](http://cKnowledge.org).
+using [Collective Knowledge Framework (CK)](http://github.com/ctuning/ck/wiki).
 
 CK enables sharing of various AI engines and artifacts 
 as reusable, customizable and portable components 
