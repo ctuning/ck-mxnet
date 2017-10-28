@@ -20,7 +20,11 @@ by assembling together CK components similar to LEGO(tm),
 plugging in various versions of AI frameworks together with 
 different libraries, compilers, tools, models and data sets,
 and automating and customizing their installation across 
-Linux, Windows, MacOS and Android.
+Linux, Windows, MacOS and Android
+(see shared [CK repositories](https://github.com/ctuning/ck/wiki/Shared-repos),
+[modules](https://github.com/ctuning/ck/wiki/Shared-modules),
+[packages](https://github.com/ctuning/ck/wiki/Shared-packages) 
+and [software detection plugins](https://github.com/ctuning/ck/wiki/Shared-soft-descriptions)).
 
 Furthermore, such portable workflows can now be crowdsourced 
 across diverse platforms from IoT to supercomputers provided by volunteers 
