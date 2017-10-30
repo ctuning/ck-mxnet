@@ -1,3 +1,5 @@
+2017.10.31 - added docker:ck-mxnet (ck build docker:ck-mxnet --sudo ; ck run docker:ck-mxnet --sudo)
+
 2017.10.26 - major update to support 0.11.0 version CPU/GPU on Linux and Windows
 
 2017.06.10 - first commit after visiting University of Washington
