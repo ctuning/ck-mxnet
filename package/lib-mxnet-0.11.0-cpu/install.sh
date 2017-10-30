@@ -1,6 +1,6 @@
 #! /bin/bash
 
-# CK installation script for TensorFlow package
+# CK installation script for MXNet package
 #
 # Developer(s):
 #  * Grigori Fursin, dividiti/cTuning foundation

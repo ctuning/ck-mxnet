@@ -1,8 +1,7 @@
 #
-# CK configuration script for TensorFlow package
+# CK configuration script for MXNet package
 #
 # Developer(s): 
-#  * Vladislav Zaborovskiy, vladzab@yandex.ru
 #  * Grigori Fursin, dividiti/cTuning foundation
 #
 
