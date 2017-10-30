@@ -12,6 +12,9 @@
       },
       {
         "repo_uoa": "ck-math"
+      },
+      {
+        "repo_uoa": "ctuning-datasets-min"
       }
     ]
   }

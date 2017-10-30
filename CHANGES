@@ -1,4 +1,5 @@
 2017.10.31 - added docker:ck-mxnet (ck build docker:ck-mxnet --sudo ; ck run docker:ck-mxnet --sudo)
+           - added dependency on ctuning-datasets-min to classify different images
 
 2017.10.26 - major update to support 0.11.0 version CPU/GPU on Linux and Windows
 
