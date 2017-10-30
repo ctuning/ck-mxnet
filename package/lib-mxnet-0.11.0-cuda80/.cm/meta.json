@@ -55,7 +55,8 @@
   "tags": [
     "lib",
     "mxnet",
-    "mxnet-cpu",
+    "mxnet-gpu",
+    "mxnet-cuda",
     "v0.11.0",
     "v0.11",
     "v0",
