@@ -73,6 +73,26 @@ $ ck run program:mxnet
 * Select image to classify
 * Observe result
 
+## Trying CK MXNet in Docker
+
+See available Docker images with different python version:
+```
+$ ck ls docker:ck-mxnet*
+```
+
+Build the one you need, for example ck-mxnet-py35:
+```
+$ ck build docker:ck-mxnet-py35 --sudo
+```
+
+You can now run this Docker image and check classification:
+```
+$ ck run docker:ck-mxnet-py35 --sudo
+$ ck run program:mxnet
+```
+
+Skip --sudo if you have local Docker installation.
+
 ## Next steps
 
 We plan to add unified compilation of MXNet via CK 
