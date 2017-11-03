@@ -13,8 +13,7 @@ to [unify and automate AI](http://cKnowledge.org/ai)
 using [Collective Knowledge Framework (CK)](http://github.com/ctuning/ck/wiki).
 
 CK enables sharing of various AI engines and artifacts 
-as reusable, customizable and portable components 
-with a simple JSON API and meta information.
+as [reusable, customizable and portable components with a simple JSON API and meta information](http://cKnowledge.org/ai-artfacts)
 CK also helps researchers quickly prototype 
 [portable AI workflows](https://github.com/ctuning/ck/wiki/Portable-workflows)
 by assembling together CK components similar to LEGO(tm), 
