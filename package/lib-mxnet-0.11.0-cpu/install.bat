@@ -1,6 +1,6 @@
 @echo off
 
-rem  CK installation script for MXNET package
+rem  CK installation script for MXNet package
 rem
 rem Developer(s):
 rem  * Grigori Fursin, dividiti/cTuning foundation
@@ -33,7 +33,7 @@ rem --ignore-installed
 %CK_PYTHON_PIP_BIN% install mxnet%MXNET_EXTRA%==%MXNET_PACKAGE_VER% -t %INSTALL_DIR%\lib
 if %errorlevel% neq 0 (
  echo.
- echo Error: Failed instaling TF ...
+ echo Error: Failed instaling MXNet ...
  exit /b 1
 )
 
