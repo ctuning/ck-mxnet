@@ -25,7 +25,7 @@ if NOT "%CK_CONDA_BIN_FULL%" == "" (
 )
 
 echo.
-echo Downloading and installing MXNET prebuilt binaries (%TF_PYTHON_URL%) ...
+echo Downloading and installing MXNET prebuilt binaries
 echo.
 
 rem --ignore-installed 

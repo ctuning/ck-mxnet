@@ -40,7 +40,7 @@ esac
 
 ######################################################################################
 echo ""
-echo "Downloading and installing MXNet prebuilt binaries (${TF_PYTHON_URL}) ..."
+echo "Downloading and installing MXNet prebuilt binaries ..."
 echo ""
 
 ${CK_PYTHON_PIP_BIN} install mxnet${MXNET_EXTRA}==${MXNET_PACKAGE_VER} -t ${INSTALL_DIR}/lib
