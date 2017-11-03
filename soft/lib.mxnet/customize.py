@@ -4,7 +4,7 @@
 # See CK LICENSE.txt for licensing details
 # See CK COPYRIGHT.txt for copyright details
 #
-# Developer: Zaborovskiy Vladislav, vladzab@yandex.ru
+# Author: Grigori Fursin, cTuning foundation/dividiti
 #
 
 import os
