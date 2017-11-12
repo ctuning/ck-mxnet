@@ -98,7 +98,8 @@ We plan to add unified compilation of MXNet via CK
 with various libs on Linux, Windows, MacOS and Android
 similar to [ck-caffe](https://github.com/dividiti/ck-caffe), 
 [ck-caffe2](https://github.com/ctuning/ck-caffe2),
-[ck-tensorflow](https://github.com/ctuning/ck-tensorflow)
+[ck-tensorflow](https://github.com/ctuning/ck-tensorflow),
+[ck-mvnc](https://github.com/ctuning/ck-mvnc)
 and [ck-cntk](https://github.com/ctuning/ck-cntk).
 
 We now have a proof-of-concept to unify AI engines and artifacts to perform collaborative AI/SW/HW benchmarking, 
