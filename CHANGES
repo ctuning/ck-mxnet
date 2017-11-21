@@ -1,3 +1,5 @@
+2017.11.21 - updated installation on Linux to adapt to local or system python
+
 2017.10.31 - added docker:ck-mxnet-py27 (ck build docker:ck-mxnet-py27 --sudo ; ck run docker:ck-mxnet-py27 --sudo)
            - added dependency on ctuning-datasets-min to classify different images
 
