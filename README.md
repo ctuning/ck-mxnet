@@ -30,8 +30,9 @@ Such portable workflows can now be crowdsourced
 across diverse platforms from IoT to supercomputers provided by volunteers 
 to enable practical and collaborative benchmarking, optimization and co-design of 
 the whole AI stack (SW/HW/models) in terms of accuracy, execution time, power consumption, 
-resource usage and other costs (see [public open CK repository](http://cKnowledge.org/repo) 
-and vision papers [1](https://arxiv.org/abs/1506.06256), [2](http://doi.acm.org/10.1145/2909437.2909449)).
+resource usage and other costs (see [public open CK repository](http://cKnowledge.org/repo), 
+vision papers [1](https://arxiv.org/abs/1506.06256), [2](http://doi.acm.org/10.1145/2909437.2909449)
+and [reproducible and CK-powered AI/SW/HW co-design competitions at ACM/IEEE conferences](http://cKnowledge.org/request)).
 
 ## Coordination of development
 
