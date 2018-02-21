@@ -23,13 +23,20 @@
       "PACKAGE_URL_LINUX": "https://github.com/apache/incubator-mxnet.git", 
       "PYTHON_EXE": "python", 
       "USE_BLAS": "openblas", 
-      "USE_OPENCV": 0
+      "USE_OPENCV": 0,
+      "MXNET_PACKAGE_VER": "master"
     }, 
     "no_ver_in_suggested_path": "yes", 
     "use_git_revision": "yes", 
     "version": "master"
   }, 
   "deps": {
+    "python": {
+      "local": "yes",
+      "name": "Python",
+      "sort": 5,
+      "tags": "compiler,python"
+    },
     "compiler": {
       "local": "yes", 
       "name": "GCC compiler", 
@@ -51,13 +58,17 @@
   "only_for_target_os_tags": [
     "linux"
   ], 
+  "package_extra_name": " (built, cpu)",
   "process_script": "install", 
   "soft_uoa": "73c2ba9aa134e3da", 
-  "suggested_path": "mxnet", 
+  "suggested_path": "mxnet-cpu", 
   "tags": [
-    "lib", 
-    "vmaster", 
-    "vsource"
+    "lib",
+    "mxnet",
+    "mxnet-cpu",
+    "vmaster",
+    "vsource",
+    "vcpu"
   ], 
   "use_preprocess_scripts_from_another_entry": {
     "data_uoa": "fd44428fbc77f77f", 
