@@ -83,6 +83,7 @@ def setup(i):
         s+='\nexport PYTHONPATH='+pl+':${PYTHONPATH}\n'
 
     for k in ienv:
-        env[k]=ienv[k]
+        if k.startswith('MXNET_'):
+           env[k]=ienv[k]
 
     return {'return':0, 'bat':s}
