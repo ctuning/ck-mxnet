@@ -17,5 +17,5 @@
       "1"
     ]
   }, 
-  "data_name": "lib.tvm.server"
+  "data_name": "lib.tvm.runtime"
 }

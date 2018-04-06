@@ -1,11 +1,11 @@
 {
   "check_exit_status": "yes", 
-  "comment": "build TVM RPC server from master", 
+  "comment": "build TVM RPC runtime from master", 
   "customize": {
     "extra_dir": "", 
     "git_src_dir": "src", 
     "install_env": {
-      "BUILD_RPC_SERVER": "ON", 
+      "BUILD_RPC_RUNTIME": "ON", 
       "PACKAGE_BUILD_TYPE": "make", 
       "PACKAGE_CONFIGURE_FLAGS": "", 
       "PACKAGE_CONFIGURE_FLAGS_LINUX": "", 
@@ -52,11 +52,11 @@
     "linux"
   ], 
   "process_script": "install", 
-  "soft_uoa": "158cbb3a6143dfa6", 
-  "suggested_path": "lib-tvm-server", 
+  "soft_uoa": "39c91a432adc4c90", 
+  "suggested_path": "lib-tvm-runtime", 
   "tags": [
     "lib", 
-    "tvm-server", 
+    "tvm-runtime", 
     "vmaster", 
     "vsources" 
   ], 

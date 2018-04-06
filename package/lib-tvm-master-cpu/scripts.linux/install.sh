@@ -19,7 +19,7 @@ echo "Preparing vars for TVM ..."
 # Check extra stuff
 EXTRA_FLAGS=""
 
-if [ "${BUILD_RPC_SERVER}" == "ON" ] ; then
+if [ "${BUILD_RPC_RUNTIME}" == "ON" ] ; then
   TVM_MAKE_TARGET=runtime
 fi
 
