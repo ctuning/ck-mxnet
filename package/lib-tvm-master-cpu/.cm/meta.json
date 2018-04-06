@@ -19,9 +19,10 @@
       "PACKAGE_SKIP_CLEAN_SRC_DIR": "NO", 
       "PACKAGE_SKIP_LINUX_MAKE": "YES", 
       "PACKAGE_SUB_DIR": "src", 
-      "PACKAGE_URL_LINUX": "https://github.com/dmlc/tvm.git", 
+      "PACKAGE_URL": "https://github.com/dmlc/tvm.git", 
       "PYTHON_EXE": "python",
       "USE_RPC":1,
+      "BUILD_RPC_SERVER":"OFF",
       "USE_OPENCL": 0
     }, 
     "no_ver_in_suggested_path": "yes", 
@@ -33,7 +34,19 @@
       "local": "yes", 
       "name": "LLVM compiler", 
       "sort": 10, 
-      "tags": "compiler, lang-c, llvm"
+      "tags": "compiler, lang-c, llvm",
+      "disable_if_env":{
+        "BUILD_RPC_SERVER":"ON"
+      }
+    }, 
+    "host-compiler": {
+      "local": "yes", 
+      "name": "Compiler", 
+      "sort": 15, 
+      "tags": "compiler, lang-c",
+      "enable_if_env":{
+        "BUILD_RPC_SERVER":"ON"
+      }
     }, 
     "python": {
       "local": "yes", 
@@ -60,10 +73,6 @@
     "vsources",
     "vcpu" 
   ], 
-  "use_preprocess_scripts_from_another_entry": {
-    "data_uoa": "fd44428fbc77f77f", 
-    "module_uoa": "84e27ad9dd12e734"
-  }, 
   "use_scripts_from_another_entry": {
     "data_uoa": "cd9ccc74060b3d18", 
     "module_uoa": "script"

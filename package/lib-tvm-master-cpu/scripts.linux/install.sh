@@ -19,9 +19,13 @@ echo "Preparing vars for TVM ..."
 # Check extra stuff
 EXTRA_FLAGS=""
 
+if [ "${BUILD_RPC_SERVER}" == "ON" ] ; then
+  TVM_MAKE_TARGET=runtime
+fi
+
 cd ${INSTALL_DIR}/src
 pwd 
-make -j ${CK_HOST_CPU_NUMBER_OF_PROCESSORS} \
+make ${TVM_MAKE_TARGET} -j ${CK_HOST_CPU_NUMBER_OF_PROCESSORS} \
       USE_OPENCL=${USE_OPENCL} \
       USE_RPC=${USE_RPC} \
       LLVM_CONFIG=${CK_LLVM_CONFIG} \
