@@ -1,6 +1,6 @@
 {
   "check_exit_status": "yes", 
-  "comment": "build TVM CPU from master", 
+  "comment": "build NNVM from master", 
   "customize": {
     "extra_dir": "", 
     "git_src_dir": "src", 
@@ -10,7 +10,7 @@
       "PACKAGE_CONFIGURE_FLAGS_LINUX": "", 
       "PACKAGE_COPY": "NO", 
       "PACKAGE_GIT": "YES", 
-      "PACKAGE_GIT_CHECKOUT": "",
+      "PACKAGE_GIT_CHECKOUT": "", 
       "PACKAGE_GIT_CLONE_FLAGS": "--recursive", 
       "PACKAGE_PATCH": "NO", 
       "PACKAGE_SKIP_BUILD_ERROR": "NO", 
@@ -19,10 +19,10 @@
       "PACKAGE_SKIP_CLEAN_SRC_DIR": "NO", 
       "PACKAGE_SKIP_LINUX_MAKE": "YES", 
       "PACKAGE_SUB_DIR": "src", 
-      "PACKAGE_URL_LINUX": "https://github.com/dmlc/tvm.git", 
-      "PYTHON_EXE": "python",
-      "USE_RPC":1,
-      "USE_OPENCL": 0
+      "PACKAGE_URL": "https://github.com/dmlc/nnvm.git", 
+      "PYTHON_EXE": "python", 
+      "USE_OPENCL": 0, 
+      "USE_RPC": 1
     }, 
     "no_ver_in_suggested_path": "yes", 
     "use_git_revision": "yes", 
@@ -31,9 +31,9 @@
   "deps": {
     "compiler": {
       "local": "yes", 
-      "name": "LLVM compiler", 
+      "name": "Compiler", 
       "sort": 10, 
-      "tags": "compiler, lang-c, llvm"
+      "tags": "compiler, lang-c"
     }, 
     "python": {
       "local": "yes", 
@@ -42,7 +42,7 @@
       "tags": "compiler,python"
     }
   }, 
-  "end_full_path_universal": "src$#sep#$lib$#sep#$libtvm$#file_ext_dll#$", 
+  "end_full_path_universal": "src$#sep#$lib$#sep#$libnnvm$#file_ext_lib#$", 
   "need_cpu_info": "yes", 
   "only_for_host_os_tags": [
     "linux"
@@ -51,14 +51,13 @@
     "linux"
   ], 
   "process_script": "install", 
-  "soft_uoa": "158cbb3a6143dfa6", 
-  "suggested_path": "lib-tvm", 
+  "soft_uoa": "98928b1af4dcf29d", 
+  "suggested_path": "lib-nnvm", 
   "tags": [
     "lib", 
-    "tvm", 
+    "nnvm", 
     "vmaster", 
-    "vsources",
-    "vcpu" 
+    "vsources" 
   ], 
   "use_preprocess_scripts_from_another_entry": {
     "data_uoa": "fd44428fbc77f77f", 
