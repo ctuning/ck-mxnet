@@ -103,4 +103,6 @@ def setup(i):
        env[ep+'_LABELS']=x
        env[ep+'_LABELS_FULL']=pi+sdirs+x
 
+    env['MXNET_MODEL_ID']=ienv.get('MXNET_MODEL_ID','')
+
     return {'return':0, 'bat':s}
