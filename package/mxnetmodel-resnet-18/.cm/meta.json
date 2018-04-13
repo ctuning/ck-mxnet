@@ -21,6 +21,7 @@
     },
     "lib-mxnet": {
       "local": "yes",
+      "skip_from_bat":"yes",
       "name": "MXNet library",
       "sort": 10,
       "tags": "lib,mxnet"
