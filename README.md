@@ -110,6 +110,12 @@ and [vision paper](https://arxiv.org/abs/1506.06256)).
 Join [our long-term community initiative](http://cKnowledge.org/ai) 
 to crowdsource learning and AI/SW/HW co-design across billions of devices!
 
+## Building from sources on ARM-based system (FireFly, RPi)
+
+```
+$ ck install package:lib-mxnet-master-cpu --env.USE_F16C=0
+```
+
 ## Related Publications with long term vision
 
 ```
