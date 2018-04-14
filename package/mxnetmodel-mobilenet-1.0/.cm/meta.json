@@ -3,15 +3,15 @@
   "customize": {
     "extra_dir": "",
     "install_env": {
-      "MXNET_MODEL": "resnet-152",
-      "MXNET_MODEL_ID": "resnet152_v1",
+      "MXNET_MODEL": "mobilenet1.0",
+      "MXNET_MODEL_ID": "mobilenet1.0",
       "MXNET_MODEL_LABELS": "synset.txt",
-      "MXNET_MODEL_PARAMS": "resnet152_v1-6562166c.params",
+      "MXNET_MODEL_PARAMS": "mobilenet1.0-6b8c5106.params",
       "MXNET_URL_MODEL_LABELS": "http://data.mxnet.io/models/imagenet-11k"
     },
     "no_os_in_suggested_path": "yes",
     "skip_file_check": "no",
-    "version": "resnet-152"
+    "version": "mobilenet1.0"
   },
   "deps": {
     "lib-mxnet": {
@@ -28,15 +28,15 @@
       "tags": "compiler,python"
     }
   },
-  "end_full_path_universal": "resnet152_v1-6562166c.params",
-  "package_extra_name": " (mxnet, resnet-152)",
+  "end_full_path_universal": "mobilenet1.0-6b8c5106.params",
+  "package_extra_name": " (mxnet, mobilenet, 1.0)",
   "process_script": "install",
   "soft_uoa": "539416b3524c4795",
   "suggested_path": "mxnetmodel",
   "tags": [
     "mxnetmodel",
-    "resnet",
-    "resnet-152",
+    "mobilenet",
+    "mobilenet1.0",
     "channel-stable"
   ]
 }

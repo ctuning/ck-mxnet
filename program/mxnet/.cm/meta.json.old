@@ -47,7 +47,7 @@
         }
       },
       "run_time": {
-        "run_cmd_main": "$<<CK_ENV_COMPILER_PYTHON_FILE>>$ ../classify.py $#dataset_path#$$#dataset_filename#$ 0"
+        "run_cmd_main": "$<<CK_ENV_COMPILER_PYTHON_FILE>>$ ../classify.py $<<CK_ENV_MODEL_MXNET_MODEL_FULL>>$ $<<CK_ENV_MODEL_MXNET_LABELS_FULL>>$ $#dataset_path#$$#dataset_filename#$ 0"
       }
     },
     "classify-gpu": {
@@ -75,7 +75,7 @@
         }
       },
       "run_time": {
-        "run_cmd_main": "$<<CK_ENV_COMPILER_PYTHON_FILE>>$ ../classify.py $#dataset_path#$$#dataset_filename#$ 1"
+        "run_cmd_main": "$<<CK_ENV_COMPILER_PYTHON_FILE>>$ ../classify.py $<<CK_ENV_MODEL_MXNET_MODEL_FULL>>$ $<<CK_ENV_MODEL_MXNET_LABELS_FULL>>$ $#dataset_path#$$#dataset_filename#$ 1"
       }
     }
   },
