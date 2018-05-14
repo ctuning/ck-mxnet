@@ -40,17 +40,55 @@ and [reproducible and CK-powered AI/SW/HW co-design competitions at ACM/IEEE con
 * [dividiti](http://dividiti.com)
 * [University of Washnigton](http://www.washington.edu)
 
-## Installation (Linux or Windows)
+## Minimal CK installation
 
-### Pre-requisities
+The minimal installation requires:
 
-* Python 2.7+ or 3.4+ with pip
-* Python sub-packages will be installed by CK
+* Python 2.7 or 3.3+ (limitation is mainly due to unitests)
+* Git command line client.
+
+### Linux/MacOS
+
+You can install CK in your local user space as following:
+
+```
+$ git clone http://github.com/ctuning/ck
+$ export PATH=$PWD/ck/bin:$PATH
+$ export PYTHONPATH=$PWD/ck:$PYTHONPATH
+```
+
+You can also install CK via PIP with sudo to avoid setting up environment variables yourself:
+
+```
+$ sudo pip install ck
+```
+
+### Windows
+
+First you need to download and install a few dependencies from the following sites:
+
+* Git: https://git-for-windows.github.io
+* Minimal Python: https://www.python.org/downloads/windows
+
+You can then install CK as following:
+```
+ $ pip install ck
+```
+
+or
+
+
+```
+ $ git clone https://github.com/ctuning/ck.git ck-master
+ $ set PATH={CURRENT PATH}\ck-master\bin;%PATH%
+ $ set PYTHONPATH={CURRENT PATH}\ck-master;%PYTHONPATH%
+```
+
+## CK workflow installation for MXNet 
 
 ### CPU
 
 ```
-$ (sudo) pip install ck
 $ ck pull repo:ck-mxnet
 $ ck install package --tags=lib,mxnet,vcpu
 ```
@@ -58,7 +96,6 @@ $ ck install package --tags=lib,mxnet,vcpu
 ### GPU
 
 ```
-$ (sudo) pip install ck
 $ ck pull repo:ck-mxnet
 $ ck install package --tags=lib,mxnet,vcuda
 ```
@@ -73,7 +110,7 @@ $ ck run program:mxnet
 * Select image to classify
 * Observe result
 
-## Trying CK MXNet in Docker
+## Trying CK MXNet via Docker
 
 See available Docker images with different python version:
 ```
