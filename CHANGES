@@ -1,3 +1,5 @@
+2018.05.25 - [FGG] added experimental MXNet build via spack - currently doesn't work
+
 2018.04.14 - added various MXNet models compatible with classify program (based on ReQuEST)
 
 2018.04.13 - added new MXNet pip versions (CPU,GPU) 1.0.0 and 1.1.0
