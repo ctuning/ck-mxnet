@@ -17,6 +17,12 @@
       "name": "Python", 
       "sort": 10, 
       "tags": "compiler,python"
+    },
+    "lib-opengl": {
+      "local": "yes", 
+      "name": "OpenGL library", 
+      "sort": 20, 
+      "tags": "lib,opengl"
     }
   }, 
   "end_full_path_universal": "lib$#sep#$mxnet$#sep#$__init__.py", 
