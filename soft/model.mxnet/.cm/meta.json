@@ -8,5 +8,6 @@
   "soft_name": "MXNet model (net and weights)",
   "tags": [
     "mxnetmodel"
-  ]
+  ],
+  "template":"yes"
 }
