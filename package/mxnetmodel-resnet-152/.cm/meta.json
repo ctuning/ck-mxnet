@@ -38,5 +38,6 @@
     "resnet",
     "resnet-152",
     "channel-stable"
-  ]
+  ],
+  "template":"yes"
 }
