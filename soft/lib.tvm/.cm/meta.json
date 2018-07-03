@@ -17,5 +17,6 @@
   "tags": [
     "lib", 
     "tvm" 
-  ]
+  ],
+  "template":"yes"
 }
