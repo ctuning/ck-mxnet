@@ -137,6 +137,7 @@ with various libs on Linux, Windows, MacOS and Android
 similar to [ck-caffe](https://github.com/dividiti/ck-caffe), 
 [ck-caffe2](https://github.com/ctuning/ck-caffe2),
 [ck-tensorflow](https://github.com/ctuning/ck-tensorflow),
+[CK-PyTorch](https://github.com/ctuning/ck-pytorch)
 [ck-mvnc](https://github.com/ctuning/ck-mvnc)
 and [ck-cntk](https://github.com/ctuning/ck-cntk).
 
