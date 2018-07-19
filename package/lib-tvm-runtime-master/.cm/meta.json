@@ -43,7 +43,7 @@
       "tags": "compiler,python"
     }
   }, 
-  "end_full_path_universal": "src$#sep#$lib$#sep#$libtvm_runtime$#file_ext_dll#$", 
+  "end_full_path_universal": "src$#sep#$build$#sep#$libtvm_runtime$#file_ext_dll#$", 
   "need_cpu_info": "yes", 
   "only_for_host_os_tags": [
     "linux"
