@@ -51,7 +51,7 @@
   "package_extra_name": " (prebuilt, cuda 8.x)",
   "process_script": "install",
   "soft_uoa": "73c2ba9aa134e3da",
-  "suggested_path": "mxnet-prebuilt-cpu",
+  "suggested_path": "mxnet-prebuilt-cuda",
   "tags": [
     "lib",
     "mxnet",

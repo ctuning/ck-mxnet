@@ -6,7 +6,6 @@
       "MXNET_MODEL": "mobilenet1.0",
       "MXNET_MODEL_ID": "mobilenet1.0",
       "MXNET_MODEL_LABELS": "synset.txt",
-      "MXNET_MODEL_PARAMS": "mobilenet1.0-6b8c5106.params",
       "MXNET_URL_MODEL_LABELS": "http://data.mxnet.io/models/imagenet-11k"
     },
     "no_os_in_suggested_path": "yes",
@@ -28,7 +27,7 @@
       "tags": "compiler,python"
     }
   },
-  "end_full_path_universal": "mobilenet1.0-6b8c5106.params",
+  "end_full_path_universal": "synset.txt",
   "package_extra_name": " (mxnet, mobilenet, 1.0)",
   "process_script": "install",
   "soft_uoa": "539416b3524c4795",

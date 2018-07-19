@@ -5,6 +5,7 @@
     "extra_dir": "", 
     "git_src_dir": "src", 
     "install_env": {
+      "BUILD_RPC_RUNTIME":"OFF",
       "PACKAGE_BUILD_TYPE": "make", 
       "PACKAGE_CONFIGURE_FLAGS": "", 
       "PACKAGE_CONFIGURE_FLAGS_LINUX": "", 
@@ -22,7 +23,6 @@
       "PACKAGE_URL": "https://github.com/dmlc/tvm.git", 
       "PYTHON_EXE": "python",
       "USE_RPC":1,
-      "BUILD_RPC_RUNTIME":"OFF",
       "USE_OPENCL": 0
     }, 
     "no_ver_in_suggested_path": "yes", 

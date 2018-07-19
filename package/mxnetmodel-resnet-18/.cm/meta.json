@@ -6,7 +6,6 @@
       "MXNET_MODEL": "resnet-18",
       "MXNET_MODEL_ID": "resnet18_v1",
       "MXNET_MODEL_LABELS": "synset.txt",
-      "MXNET_MODEL_PARAMS": "resnet18_v1-e54b379f.params",
       "MXNET_URL_MODEL_LABELS": "http://data.mxnet.io/models/imagenet-11k"
     },
     "no_os_in_suggested_path": "yes",
@@ -28,7 +27,7 @@
       "tags": "compiler,python"
     }
   },
-  "end_full_path_universal": "resnet18_v1-e54b379f.params",
+  "end_full_path_universal": "synset.txt",
   "package_extra_name": " (mxnet, resnet-18)",
   "process_script": "install",
   "soft_uoa": "539416b3524c4795",

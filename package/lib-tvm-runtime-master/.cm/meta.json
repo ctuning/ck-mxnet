@@ -22,6 +22,7 @@
       "PACKAGE_SUB_DIR": "src", 
       "PACKAGE_URL": "https://github.com/dmlc/tvm.git", 
       "PYTHON_EXE": "python", 
+      "SUBSTITUTE_ORIGINAL_PACKAGE_DIR": "$#path_to_cid=package:fdda38b07c848ec8#$",
       "USE_OPENCL": 0, 
       "USE_RPC": 1
     }, 

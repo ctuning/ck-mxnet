@@ -38,5 +38,9 @@
     "vprebuilt",
     "vcpu",
     "channel-stable"
-  ]
+  ],
+  "use_scripts_from_another_entry": {
+    "data_uoa": "720d42842c47ec84",
+    "module_uoa": "package"
+  }
 }

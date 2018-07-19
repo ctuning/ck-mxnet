@@ -78,10 +78,25 @@ def setup(i):
 
     pi=os.path.dirname(fp)
 
+    # Finding *.params
+    d=os.listdir(pi)
+    fparams=''
+
+    for f in d:
+        f1=os.path.join(pi,f)
+        if os.path.isfile(f1) and f.endswith('.params'):
+           fparams=f
+           break
+
+    if fparams=='':
+       return {'return':1, 'error':'can\'t find *.params file'}
+
     ep=cus['env_prefix']
     env[ep]=pi
 
     ienv=cus.get('install_env',{})
+
+    ienv['MXNET_MODEL_PARAMS']=fparams
 
     x=ienv.get('MXNET_MODEL','')
     if x!='': 

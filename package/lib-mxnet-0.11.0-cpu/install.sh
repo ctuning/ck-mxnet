@@ -26,19 +26,49 @@ if [[ ${CK_PYTHON_PIP_BIN_FULL} == /home/* ]] ; then
   SUDO=""
 fi
 
+######################################################################################
+# Check if has --system option
+${CK_ENV_COMPILER_PYTHON_FILE} -m pip install --help > tmp-pip-help.tmp
+if grep -q "\-\-system" tmp-pip-help.tmp ; then
+ SYS=" --system"
+fi
+rm -f tmp-pip-help.tmp
+
+######################################################################################
+echo "Downloading and installing Python deps ..."
 echo ""
-read -r -p "Install OpenCV and other dependencies via sudo apt-get and pip (Y/n)? " x
+
+EXTRA_PYTHON_SITE=${INSTALL_DIR}/lib
+mkdir -p ${EXTRA_PYTHON_SITE}
+
+${CK_ENV_COMPILER_PYTHON_FILE} -m pip install --ignore-installed decorator wget matplotlib jupyter opencv-python -t ${EXTRA_PYTHON_SITE}  ${SYS}
+if [ "${?}" != "0" ] ; then
+  echo "Error: installation failed!"
+  exit 1
+fi
+
+######################################################################################
+echo ""
+echo "Downloading and installing MXNet prebuilt binaries ..."
+echo ""
+
+${CK_ENV_COMPILER_PYTHON_FILE} -m pip install mxnet${MXNET_EXTRA}==${MXNET_PACKAGE_VER} -t ${INSTALL_DIR}/lib ${SYS}
+if [ "${?}" != "0" ] ; then
+  echo "Error: installation failed!"
+  exit 1
+fi
+
+######################################################################################
+echo ""
+read -r -p "Install extra dependencies for classification using SUDO and apt-get (y/N)? " x
+
+echo "XYZ=$x"
 
 case "$x" in
-  [nN][oO]|[nN])
-    ;;
-  *)
+  [yY][eE][sS]|[yY])
     echo ""
     echo "Using ${SUDO} ${CK_PYTHON_PIP_BIN_FULL} ..."
     echo ""
-
-    ${SUDO} ${CK_PYTHON_PIP_BIN_FULL} install --upgrade pip
-    ${SUDO} ${CK_PYTHON_PIP_BIN_FULL} install requests matplotlib jupyter opencv-python
 
     echo ""
     echo "Installing python-tk (sudo) ..."
@@ -52,22 +82,5 @@ case "$x" in
     ;;
 esac
 
-######################################################################################
-echo ""
-echo "Downloading and installing MXNet prebuilt binaries ..."
-echo ""
-
-# Check if has --system option
-${CK_PYTHON_PIP_BIN_FULL} install --help > tmp-pip-help.tmp
-if grep -q "\-\-system" tmp-pip-help.tmp ; then
- SYS=" --system"
-fi
-rm -f tmp-pip-help.tmp
-
-${CK_PYTHON_PIP_BIN_FULL} install mxnet${MXNET_EXTRA}==${MXNET_PACKAGE_VER} -t ${INSTALL_DIR}/lib ${SYS}
-if [ "${?}" != "0" ] ; then
-  echo "Error: installation failed!"
-  exit 1
-fi
 
 exit 0

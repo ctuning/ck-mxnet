@@ -13,6 +13,27 @@
 # PACKAGE_DIR
 # INSTALL_DIR
 
+######################################################################################
+# Check if has --system option
+${CK_ENV_COMPILER_PYTHON_FILE} -m pip install --help > tmp-pip-help.tmp
+if grep -q "\-\-system" tmp-pip-help.tmp ; then
+ SYS=" --system"
+fi
+rm -f tmp-pip-help.tmp
+
+######################################################################################
+echo "Downloading and installing deps ..."
+echo ""
+
+EXTRA_PYTHON_SITE=${INSTALL_DIR}/src/python
+
+${CK_ENV_COMPILER_PYTHON_FILE} -m pip install --ignore-installed decorator wget -t ${EXTRA_PYTHON_SITE}  ${SYS}
+if [ "${?}" != "0" ] ; then
+  echo "Error: installation failed!"
+  exit 1
+fi
+
+######################################################################################
 echo "**************************************************************"
 echo "Preparing vars for TVM ..."
 
