@@ -22,7 +22,7 @@
       "version_to": [
         9,
         1,
-        99
+        999
       ]
     },
     "lib-cudnn": {
@@ -48,10 +48,10 @@
     "linux",
     "windows"
   ],
-  "package_extra_name": " (prebuilt, cuda 8.x)",
+  "package_extra_name": " (prebuilt, cuda 9.1)",
   "process_script": "install",
   "soft_uoa": "73c2ba9aa134e3da",
-  "suggested_path": "mxnet-prebuilt-cuda",
+  "suggested_path": "mxnet-prebuilt-cuda91",
   "tags": [
     "lib",
     "mxnet",
@@ -59,7 +59,7 @@
     "mxnet-cuda",
     "v1.1.0",
     "v1.1",
-    "v0",
+    "v1",
     "vprebuilt",
     "vcuda",
     "vcuda-91",

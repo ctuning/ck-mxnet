@@ -4,9 +4,9 @@
     "install_env": {
       "MXNET_EXTRA": "-cu80",
       "MXNET_GPU": "YES",
-      "MXNET_PACKAGE_VER": "1.0.0"
+      "MXNET_PACKAGE_VER": "1.2.1"
     },
-    "version": "1.0.0"
+    "version": "1.2.1"
   },
   "deps": {
     "compiler-cuda": {
@@ -48,7 +48,7 @@
     "linux",
     "windows"
   ],
-  "package_extra_name": " (prebuilt, cuda 8.x)",
+  "package_extra_name": " (prebuilt, cuda 8.0)",
   "process_script": "install",
   "soft_uoa": "73c2ba9aa134e3da",
   "suggested_path": "mxnet-prebuilt-cuda80",
@@ -57,14 +57,15 @@
     "mxnet",
     "mxnet-gpu",
     "mxnet-cuda",
-    "v1.0.0",
-    "v1.0",
+    "v1.2.1",
+    "v1.2",
     "v1",
     "vprebuilt",
     "vcuda",
     "vcuda-80",
     "channel-stable"
   ],
+  "template": "yes",
   "use_scripts_from_another_entry": {
     "data_uoa": "720d42842c47ec84",
     "module_uoa": "package"

@@ -21,9 +21,7 @@
       "PACKAGE_SKIP_LINUX_MAKE": "YES", 
       "PACKAGE_SUB_DIR": "src", 
       "PACKAGE_URL": "https://github.com/dmlc/tvm.git", 
-      "PYTHON_EXE": "python",
-      "USE_RPC":1,
-      "USE_OPENCL": 0
+      "PYTHON_EXE": "python"
     }, 
     "no_ver_in_suggested_path": "yes", 
     "use_git_revision": "yes", 
@@ -32,21 +30,9 @@
   "deps": {
     "compiler": {
       "local": "yes", 
-      "name": "LLVM compiler", 
+      "name": "C compiler", 
       "sort": 10, 
-      "tags": "compiler, lang-c, llvm",
-      "disable_if_env":{
-        "BUILD_RPC_RUNTIME":"ON"
-      }
-    }, 
-    "host-compiler": {
-      "local": "yes", 
-      "name": "Compiler", 
-      "sort": 15, 
-      "tags": "compiler, lang-c",
-      "enable_if_env":{
-        "BUILD_RPC_RUNTIME":"ON"
-      }
+      "tags": "compiler,lang-c"
     }, 
     "python": {
       "local": "yes", 
@@ -55,7 +41,7 @@
       "tags": "compiler,python"
     }
   }, 
-  "end_full_path_universal": "src$#sep#$build$#sep#$libtvm$#file_ext_dll#$", 
+  "end_full_path_universal": "build$#sep#$libtvm$#file_ext_dll#$", 
   "need_cpu_info": "yes", 
   "only_for_host_os_tags": [
     "linux"

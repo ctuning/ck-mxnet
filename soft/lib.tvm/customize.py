@@ -74,15 +74,19 @@ def setup(i):
     pl=os.path.dirname(fp)
     pi=os.path.dirname(pl)
 
-    ptvm=os.path.join(pi,'python')
-    ptopi=os.path.join(pi,'topi','python')
-    pnnvm=os.path.join(pi,'nnvm','python')
+    ps=os.path.join(pi, 'src')
+
+    ptvm=os.path.join(ps,'python')
+    ptopi=os.path.join(ps,'topi','python')
+    pnnvm=os.path.join(ps,'nnvm','python')
+    pvta=os.path.join(ps,'vta','python')
 
     env[ep]=pi
     env[ep+'_LIB']=pl
     env[ep+'_PYTHON_LIB']=ptvm
     env[ep+'_PYTHON_TOPI_LIB']=ptopi
     env[ep+'_PYTHON_NNVM_LIB']=pnnvm
+    env[ep+'_PYTHON_VTA_LIB']=pvta
 
     cus['path_lib']=pl
 
@@ -94,9 +98,9 @@ def setup(i):
     s += r['script']
 
     if winh=='yes':
-        s+='\nset PYTHONPATH='+ptvm+';'+ptopi+';'+pnnvm+';%PYTHONPATH%\n'
+        s+='\nset PYTHONPATH='+ptvm+';'+ptopi+';'+pnnvm+';'+pvta+';%PYTHONPATH%\n'
     else:
-        s+='\nexport PYTHONPATH='+ptvm+':'+ptopi+':'+pnnvm+':${PYTHONPATH}\n'
+        s+='\nexport PYTHONPATH='+ptvm+':'+ptopi+':'+pnnvm+':'+pvta+':${PYTHONPATH}\n'
 
     for k in ienv:
         if k.startswith('TVM_') or k=='CK_PYTHON_IPYTHON_BIN_FULL' or k=='CK_ENV_COMPILER_PYTHON_FILE':

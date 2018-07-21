@@ -52,7 +52,8 @@ echo ""
 echo "Downloading and installing MXNet prebuilt binaries ..."
 echo ""
 
-${CK_ENV_COMPILER_PYTHON_FILE} -m pip install mxnet${MXNET_EXTRA}==${MXNET_PACKAGE_VER} -t ${INSTALL_DIR}/lib ${SYS}
+# FGG added --upgrade later to install correct numpy with mxnet
+${CK_ENV_COMPILER_PYTHON_FILE} -m pip install mxnet${MXNET_EXTRA}==${MXNET_PACKAGE_VER} -t ${INSTALL_DIR}/lib ${SYS} --upgrade
 if [ "${?}" != "0" ] ; then
   echo "Error: installation failed!"
   exit 1

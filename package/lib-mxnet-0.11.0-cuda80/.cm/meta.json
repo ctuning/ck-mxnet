@@ -28,7 +28,7 @@
       "version_to": [
         8,
         0,
-        99
+        999
       ]
     },
     "lib-cudnn": {
@@ -51,7 +51,7 @@
   "package_extra_name": " (prebuilt, cuda 8.x)",
   "process_script": "install",
   "soft_uoa": "73c2ba9aa134e3da",
-  "suggested_path": "mxnet-prebuilt-cuda",
+  "suggested_path": "mxnet-prebuilt-cuda80",
   "tags": [
     "lib",
     "mxnet",

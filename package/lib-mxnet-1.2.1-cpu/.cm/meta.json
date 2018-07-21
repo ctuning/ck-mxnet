@@ -2,9 +2,9 @@
   "customize": {
     "extra_dir": "",
     "install_env": {
-      "MXNET_PACKAGE_VER": "1.1.0"
+      "MXNET_PACKAGE_VER": "1.2.1"
     },
-    "version": "1.1.0"
+    "version": "1.2.1"
   },
   "deps": {
     "python": {
@@ -32,8 +32,8 @@
     "lib",
     "mxnet",
     "mxnet-cpu",
-    "v1.1.0",
-    "v1.1",
+    "v1.2.1",
+    "v1.2",
     "v1",
     "vprebuilt",
     "vcpu",

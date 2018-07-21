@@ -27,7 +27,7 @@ echo ""
 
 EXTRA_PYTHON_SITE=${INSTALL_DIR}/src/python
 
-${CK_ENV_COMPILER_PYTHON_FILE} -m pip install --ignore-installed decorator tornado psutil wget -t ${EXTRA_PYTHON_SITE}  ${SYS}
+${CK_ENV_COMPILER_PYTHON_FILE} -m pip install --ignore-installed decorator wget -t ${EXTRA_PYTHON_SITE}  ${SYS}
 if [ "${?}" != "0" ] ; then
   echo "Error: installation failed!"
   exit 1
@@ -43,32 +43,12 @@ if [ "${BUILD_RPC_RUNTIME}" == "ON" ] ; then
   TVM_MAKE_TARGET=runtime
 fi
 
-cd ${INSTALL_DIR}
-
-mkdir build
-cd build
-
-# Update config.cmake
-ck replace_strings_in_file misc --replacement_json_file=${TMP_TVM_CMAKE_UPDATE_FILE} \
-                                --file=../src/cmake/config.cmake \
-                                --file_out=config.cmake
-if [ "${?}" != "0" ] ; then
-  echo "Error: config.cmake update failed!"
-  exit 1
-fi
-
-rm -f ${TMP_TVM_CMAKE_UPDATE_FILE}
-
-cmake ../src
-if [ "${?}" != "0" ] ; then
-  echo "Error: cmake failed!"
-  exit 1
-fi
-
-make -j ${CK_HOST_CPU_NUMBER_OF_PROCESSORS}
-#      USE_OPENCL=${USE_OPENCL} \
-#      USE_RPC=${USE_RPC} \
-#      LLVM_CONFIG=${CK_LLVM_CONFIG} \
+cd ${INSTALL_DIR}/src
+pwd 
+make ${TVM_MAKE_TARGET} -j ${CK_HOST_CPU_NUMBER_OF_PROCESSORS} \
+      USE_OPENCL=${USE_OPENCL} \
+      USE_RPC=${USE_RPC} \
+      LLVM_CONFIG=${CK_LLVM_CONFIG} \
 
 if [ "${?}" != "0" ] ; then
   echo "Error: make failed!"

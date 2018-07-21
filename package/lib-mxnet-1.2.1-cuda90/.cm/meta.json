@@ -2,25 +2,25 @@
   "customize": {
     "extra_dir": "",
     "install_env": {
-      "MXNET_EXTRA": "-cu80",
+      "MXNET_EXTRA": "-cu90",
       "MXNET_GPU": "YES",
-      "MXNET_PACKAGE_VER": "1.0.0"
+      "MXNET_PACKAGE_VER": "1.2.1"
     },
-    "version": "1.0.0"
+    "version": "1.2.1"
   },
   "deps": {
     "compiler-cuda": {
       "local": "yes",
-      "name": "CUDA compiler 8.0.x",
+      "name": "CUDA compiler",
       "sort": 30,
       "tags": "compiler,lang-c-cuda",
       "version_from": [
-        8,
+        9,
         0,
         0
       ],
       "version_to": [
-        8,
+        9,
         0,
         999
       ]
@@ -48,23 +48,24 @@
     "linux",
     "windows"
   ],
-  "package_extra_name": " (prebuilt, cuda 8.x)",
+  "package_extra_name": " (prebuilt, cuda 9.0)",
   "process_script": "install",
   "soft_uoa": "73c2ba9aa134e3da",
-  "suggested_path": "mxnet-prebuilt-cuda80",
+  "suggested_path": "mxnet-prebuilt-cuda90",
   "tags": [
     "lib",
     "mxnet",
     "mxnet-gpu",
     "mxnet-cuda",
-    "v1.0.0",
-    "v1.0",
+    "v1.2.1",
+    "v1.2",
     "v1",
     "vprebuilt",
     "vcuda",
-    "vcuda-80",
+    "vcuda-90",
     "channel-stable"
   ],
+  "template": "yes",
   "use_scripts_from_another_entry": {
     "data_uoa": "720d42842c47ec84",
     "module_uoa": "package"

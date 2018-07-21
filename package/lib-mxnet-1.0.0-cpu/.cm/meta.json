@@ -34,7 +34,7 @@
     "mxnet-cpu",
     "v1.0.0",
     "v1.0",
-    "v0",
+    "v1",
     "vprebuilt",
     "vcpu",
     "channel-stable"

@@ -1,3 +1,5 @@
+2018.07.21 - [FGG] added MXNet 1.2.1 and improved TVM building
+
 2018.07.19 - [FGG] fixed build paths in TVM
                    major update of all packages (paths, vars, extra deps)
 

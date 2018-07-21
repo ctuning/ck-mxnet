@@ -1,0 +1,20 @@
+{
+  "backup_data_uid": "5d4267b293c9cd4e",
+  "backup_module_uid": "1dc07ee0f4742028",
+  "backup_module_uoa": "package",
+  "control": {
+    "author": "cTuning foundation",
+    "author_email": "admin@cTuning.org",
+    "author_webpage": "http://cTuning.org",
+    "copyright": "See CK COPYRIGHT.txt for copyright details",
+    "engine": "CK",
+    "iso_datetime": "2018-07-21T18:35:04.108005",
+    "license": "See CK LICENSE.txt for licensing details",
+    "version": [
+      "1",
+      "9",
+      "5"
+    ]
+  },
+  "data_name": "lib-tvm-master-cuda"
+}
