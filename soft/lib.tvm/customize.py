@@ -82,6 +82,7 @@ def setup(i):
     pvta=os.path.join(ps,'vta','python')
 
     env[ep]=pi
+    env[ep+'_SRC']=ps
     env[ep+'_LIB']=pl
     env[ep+'_PYTHON_LIB']=ptvm
     env[ep+'_PYTHON_TOPI_LIB']=ptopi
