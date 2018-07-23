@@ -1,6 +1,6 @@
 {
   "check_exit_status": "yes",
-  "comment": "build TVM CUDA from master",
+  "comment": "build TVM CPU from master",
   "customize": {
     "extra_dir": "",
     "git_src_dir": "src",
@@ -23,7 +23,9 @@
       "PACKAGE_URL": "https://github.com/dmlc/tvm.git",
       "PYTHON_EXE": "python",
       "SUBSTITUTE_ORIGINAL_PACKAGE_DIR": "$#path_to_cid=package:fdda38b07c848ec8#$",
-      "USE_CUDA": "ON"
+      "USE_LLVM": "ON",
+      "FPGA_HOST": "ON",
+      "USE_VTA_CONFIG": "pynq_sample.json"
     },
     "no_ver_in_suggested_path": "yes",
     "use_git_revision": "yes",
@@ -36,17 +38,11 @@
       "sort": 10,
       "tags": "compiler,lang-c"
     },
-    "compiler-cuda": {
+    "llvm-compiler": {
       "local": "yes",
-      "name": "CUDA compiler",
-      "sort": 30,
-      "tags": "compiler,lang-c-cuda"
-    },
-    "lib-cudnn": {
-      "local": "yes",
-      "name": "cuDNN library",
-      "sort": 40,
-      "tags": "lib,cudnn"
+      "name": "LLVM Compiler",
+      "sort": 15,
+      "tags": "compiler,lang-c,llvm"
     },
     "python": {
       "local": "yes",
@@ -55,7 +51,7 @@
       "tags": "compiler,python"
     }
   },
-  "end_full_path_universal": "src$#sep#$build$#sep#$libtvm$#file_ext_dll#$",
+  "end_full_path_universal": "src$#sep#$vta$#sep#$python$#sep#$vta$#sep#$__init__.py",
   "need_cpu_info": "yes",
   "only_for_host_os_tags": [
     "linux"
@@ -63,16 +59,18 @@
   "only_for_target_os_tags": [
     "linux"
   ],
-  "package_extra_name": " (cuda)",
-   "process_script": "install",
+  "package_extra_name": " (forced llvm)",
+  "process_script": "install",
   "soft_uoa": "158cbb3a6143dfa6",
-  "suggested_path": "lib-tvm-cuda",
+  "suggested_path": "lib-tvm-fpga-pynq",
   "tags": [
     "lib",
     "tvm",
     "vmaster",
     "vsources",
-    "vcuda"
+    "vfpga",
+    "vpynq",
+    "vhost"
   ],
   "use_scripts_from_another_entry": {
     "data_uoa": "cd9ccc74060b3d18",

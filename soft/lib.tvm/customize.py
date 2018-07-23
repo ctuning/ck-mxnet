@@ -70,7 +70,13 @@ def setup(i):
     env=i['env']
     ep=cus['env_prefix']
 
-#    p1=os.path.dirname(fp)
+#    r=ck.access({'action':'find_file_above_path', 'module_uoa':'os', 'path':fp, 'file':'nnvm'})
+#    if r['return']>0: return r
+
+#    if ienv.get('FPGA_HOST','').lower()=='on':
+#       pl=''
+#       pi=os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(fp))))
+#    else:
     pl=os.path.dirname(fp)
     pi=os.path.dirname(pl)
 
@@ -83,13 +89,14 @@ def setup(i):
 
     env[ep]=pi
     env[ep+'_SRC']=ps
-    env[ep+'_LIB']=pl
     env[ep+'_PYTHON_LIB']=ptvm
     env[ep+'_PYTHON_TOPI_LIB']=ptopi
     env[ep+'_PYTHON_NNVM_LIB']=pnnvm
     env[ep+'_PYTHON_VTA_LIB']=pvta
 
-    cus['path_lib']=pl
+    if pl!='':
+       env[ep+'_LIB']=pl
+       cus['path_lib']=pl
 
     r = ck.access({'action': 'lib_path_export_script', 
                    'module_uoa': 'os', 

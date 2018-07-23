@@ -1,4 +1,5 @@
 2018.07.23 - [FGG] added VTA-based images classification example via SIM
+                   added support for FPGA
 
 2018.07.21 - [FGG] added MXNet 1.2.1 and improved TVM building
 

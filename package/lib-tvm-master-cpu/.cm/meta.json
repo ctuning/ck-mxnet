@@ -51,7 +51,7 @@
   ], 
   "process_script": "install", 
   "soft_uoa": "158cbb3a6143dfa6", 
-  "suggested_path": "lib-tvm", 
+  "suggested_path": "lib-tvm-cpu", 
   "tags": [
     "lib", 
     "tvm", 

@@ -35,19 +35,14 @@ if [ "${?}" != "0" ] ; then
   exit 1
 fi
 
-echo "**************************************************************"
-echo "Preparing vars for TVM ..."
-
-# Check extra stuff
-EXTRA_FLAGS=""
-
-if [ "${BUILD_RPC_RUNTIME}" == "ON" ] ; then
-  TVM_MAKE_TARGET=runtime
-fi
+# Building TVM etc
 
 cd ${INSTALL_DIR}
-
 cd src
+
+if [ "${TVM_FPGA_SERVER}" == "ON" ] ; then
+  TVM_MAKE_TARGET=runtime
+fi
 
 mkdir build
 cd build
@@ -67,10 +62,14 @@ if [ "${?}" != "0" ] ; then
   exit 1
 fi
 
-make -j ${CK_HOST_CPU_NUMBER_OF_PROCESSORS}
+make ${TVM_MAKE_TARGET} -j ${CK_HOST_CPU_NUMBER_OF_PROCESSORS}
 if [ "${?}" != "0" ] ; then
   echo "Error: make failed!"
   exit 1
+fi
+
+if [ "${USE_VTA_CONFIG}" == "ON" ] ; then
+  cp -f ../vta/config/${USE_VTA_CONFIG} vta_config.json
 fi
 
 return 0

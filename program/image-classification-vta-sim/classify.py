@@ -216,8 +216,13 @@ synset = eval(open(os.path.join(VTAMODEL_LABELS_FILE)).read())
 reconfig_start = time.time()
 
 # We read the Pynq RPC host IP address and port number from the OS environment
-host = os.environ.get("VTA_PYNQ_RPC_HOST", "192.168.2.99")
-port = int(os.environ.get("VTA_PYNQ_RPC_PORT", "9091"))
+host = os.environ.get('CK_MACHINE_HOST','')
+if host=='':
+   host = os.environ.get("VTA_PYNQ_RPC_HOST", "192.168.2.99")
+
+port = os.environ.get('CK_MACHINE_PORT','')
+if port=='':
+   port = int(os.environ.get("VTA_PYNQ_RPC_PORT", "9091"))
 
 # We configure both the bitstream and the runtime system on the Pynq
 # to match the VTA configuration specified by the config.json file.

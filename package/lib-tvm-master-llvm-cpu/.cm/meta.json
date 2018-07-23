@@ -32,14 +32,8 @@
   "deps": {
     "compiler": {
       "local": "yes",
-      "name": "C compiler",
+      "name": "LLVM compiler",
       "sort": 10,
-      "tags": "compiler,lang-c"
-    },
-    "llvm-compiler": {
-      "local": "yes",
-      "name": "LLVM Compiler",
-      "sort": 15,
       "tags": "compiler,lang-c,llvm"
     },
     "python": {
@@ -60,7 +54,7 @@
   "package_extra_name": " (forced llvm)",
   "process_script": "install",
   "soft_uoa": "158cbb3a6143dfa6",
-  "suggested_path": "lib-tvm",
+  "suggested_path": "lib-tvm-llvm-cpu",
   "tags": [
     "lib",
     "tvm",
