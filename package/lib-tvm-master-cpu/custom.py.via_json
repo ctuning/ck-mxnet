@@ -99,10 +99,7 @@ def setup(i):
     ie=cus.get('install_env',{})
     nie={} # new env
 
-    cmake={'USE_RPC':'ON',
-           'USE_SORT':'ON',
-           'USE_GRAPH_RUNTIME':'ON',
-           'USE_BLAS':'none'}
+    rep={} # Prepare replacements
 
     # Check if LLVM is used and set CK_LLVM_CONFIG
     env1=deps.get('compiler',{}).get('dict',{}).get('env',{})
@@ -115,18 +112,15 @@ def setup(i):
 
        llvm_config=os.path.join(p1,p2)
 
-       cmake['USE_LLVM']=llvm_config
+       rep['USE_LLVM OFF']='USE_LLVM '+llvm_config
 
     # Check OpenCL
     if ie.get('USE_OPENCL','').lower()=='on':
-       cmake['USE_OPENCL']='ON'
+       rep['USE_OPENCL OFF']='USE_OPENCL ON'
 
     # Check CUDA
     if ie.get('USE_CUDA','').lower()=='on':
-       cmake['USE_CUDA']='ON'
-
-    if ie.get('USE_CUDNN','').lower()=='on':
-       cmake['USE_CUDNN']='ON'
+       rep['USE_CUDA OFF']='USE_CUDA ON'
 
     # Generate tmp file
     r=ck.gen_tmp_file({})
@@ -137,12 +131,7 @@ def setup(i):
     nie['TMP_TVM_CMAKE_UPDATE_FILE']=tmp_file_name
 
     # Save JSON to tmp file (will be picked up by install.sh and recored to INSTALL dir)
-    s=''
-    for k in cmake:
-        v=cmake[k]
-        s+='set('+k+' '+v+')\n'
-
-    r=ck.save_text_file({'text_file':tmp_file_name, 'string':s})
+    r=ck.save_json_to_file({'json_file':tmp_file_name, 'dict':rep})
     if r['return']>0: return r
 
     return {'return':0, 'install_env':nie}

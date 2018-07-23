@@ -27,9 +27,7 @@ echo ""
 
 EXTRA_PYTHON_SITE=${INSTALL_DIR}/src/python
 
-${CK_ENV_COMPILER_PYTHON_FILE} -m pip install --ignore-installed decorator tornado psutil xgboost wget \
-                                                                 nose pylint numpy nose-timer cython scipy \
-                                                                 -t ${EXTRA_PYTHON_SITE} ${SYS}
+${CK_ENV_COMPILER_PYTHON_FILE} -m pip install --ignore-installed decorator tornado psutil wget -t ${EXTRA_PYTHON_SITE}  ${SYS}
 if [ "${?}" != "0" ] ; then
   echo "Error: installation failed!"
   exit 1
@@ -47,13 +45,13 @@ fi
 
 cd ${INSTALL_DIR}
 
-cd src
-
 mkdir build
 cd build
 
 # Update config.cmake
-cp -f ${TMP_TVM_CMAKE_UPDATE_FILE} ../config.cmake
+ck replace_strings_in_file misc --replacement_json_file=${TMP_TVM_CMAKE_UPDATE_FILE} \
+                                --file=../src/cmake/config.cmake \
+                                --file_out=config.cmake
 if [ "${?}" != "0" ] ; then
   echo "Error: config.cmake update failed!"
   exit 1
@@ -61,16 +59,21 @@ fi
 
 rm -f ${TMP_TVM_CMAKE_UPDATE_FILE}
 
-cmake ..
+cmake ../src
 if [ "${?}" != "0" ] ; then
   echo "Error: cmake failed!"
   exit 1
 fi
 
 make -j ${CK_HOST_CPU_NUMBER_OF_PROCESSORS}
+#      USE_OPENCL=${USE_OPENCL} \
+#      USE_RPC=${USE_RPC} \
+#      LLVM_CONFIG=${CK_LLVM_CONFIG} \
+
 if [ "${?}" != "0" ] ; then
   echo "Error: make failed!"
   exit 1
 fi
+cd ${INSTALL_DIR}/src
 
 return 0

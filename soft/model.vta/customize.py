@@ -4,7 +4,7 @@
 # See CK LICENSE.txt for licensing details
 # See CK COPYRIGHT.txt for copyright details
 #
-# Author: Grigori Fursin, cTuning foundation/dividiti
+# Developer: Grigori Fursin, Grigori.Fursin@cTuning.org, http://fursin.net
 #
 
 import os
@@ -63,48 +63,32 @@ def setup(i):
     hosd=i['host_os_dict']
     tosd=i['target_os_dict']
 
-    winh=hosd.get('windows_base','')
+    sdirs=hosd.get('dir_sep','')
+
+    # Check platform
+    hplat=hosd.get('ck_name','')
+
+    hproc=hosd.get('processor','')
+    tproc=tosd.get('processor','')
+
+    remote=tosd.get('remote','')
+    tbits=tosd.get('bits','')
+
+    env=i['env']
+
+    pi=os.path.dirname(fp)
+
+    ep=cus['env_prefix']
+    env[ep]=pi
 
     ienv=cus.get('install_env',{})
 
-    env=i['env']
-    ep=cus['env_prefix']
-
-#    p1=os.path.dirname(fp)
-    pl=os.path.dirname(fp)
-    pi=os.path.dirname(pl)
-
-    ps=pi #os.path.join(pi, 'src')
-
-    ptvm=os.path.join(ps,'python')
-    ptopi=os.path.join(ps,'topi','python')
-    pnnvm=os.path.join(ps,'nnvm','python')
-    pvta=os.path.join(ps,'vta','python')
-
-    env[ep]=pi
-    env[ep+'_SRC']=ps
-    env[ep+'_LIB']=pl
-    env[ep+'_PYTHON_LIB']=ptvm
-    env[ep+'_PYTHON_TOPI_LIB']=ptopi
-    env[ep+'_PYTHON_NNVM_LIB']=pnnvm
-    env[ep+'_PYTHON_VTA_LIB']=pvta
-
-    cus['path_lib']=pl
-
-    r = ck.access({'action': 'lib_path_export_script', 
-                   'module_uoa': 'os', 
-                   'host_os_dict': hosd, 
-                   'lib_path': cus.get('path_lib', '')})
-    if r['return']>0: return r
-    s += r['script']
-
-    if winh=='yes':
-        s+='\nset PYTHONPATH='+ptvm+';'+ptopi+';'+pnnvm+';'+pvta+';%PYTHONPATH%\n'
-    else:
-        s+='\nexport PYTHONPATH='+ptvm+':'+ptopi+':'+pnnvm+':'+pvta+':${PYTHONPATH}\n'
-
     for k in ienv:
-        if k.startswith('TVM_') or k=='CK_PYTHON_IPYTHON_BIN_FULL' or k=='CK_ENV_COMPILER_PYTHON_FILE':
-           env[k]=ienv[k]
+        if k.startswith('VTA_MODEL'):
+           x=ienv[k]
+           if x!='':
+              y=k[3:]
+              env[ep+y]=x
+              env[ep+y+'_FULL']=pi+sdirs+x
 
     return {'return':0, 'bat':s}
