@@ -71,7 +71,7 @@ if [ "${?}" != "0" ] ; then
   exit 1
 fi
 
-if [ "${USE_VTA_CONFIG}" == "ON" ] ; then
+if [ "${USE_VTA_CONFIG}" != "" ] ; then
   cp -f ../vta/config/${USE_VTA_CONFIG} vta_config.json
 fi
 
