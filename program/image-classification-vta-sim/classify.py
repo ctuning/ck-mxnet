@@ -222,11 +222,29 @@ if host=='':
 
 port = os.environ.get('CK_MACHINE_PORT','')
 if port=='':
-   port = int(os.environ.get("VTA_PYNQ_RPC_PORT", "9091"))
+   port = os.environ.get("VTA_PYNQ_RPC_PORT", "9091")
+port=int(port)
 
 # We configure both the bitstream and the runtime system on the Pynq
 # to match the VTA configuration specified by the config.json file.
 if env.TARGET == "pynq":
+
+    # try init
+    if os.environ.get('INIT_PYNQ','').lower()=='yes':
+       print ('')
+       print ('Initializing board ...')
+
+       from tvm import rpc
+       from vta import get_bitstream_path, download_bitstream, program_fpga, reconfig_runtime
+
+       assert tvm.module.enabled("rpc")
+       remote = rpc.connect(host, port)
+       program_fpga(remote, None) # None -> path
+
+       remote = rpc.connect(host, port)
+       reconfig_runtime(remote)
+
+       print ('')
 
     # Make sure that TVM was compiled with RPC=1
     assert tvm.module.enabled("rpc")
