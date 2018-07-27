@@ -240,8 +240,7 @@ if env.TARGET == "pynq":
        assert tvm.module.enabled("rpc")
        remote = rpc.connect(host, port)
        program_fpga(remote, None) # None -> path
-
-       remote = rpc.connect(host, port)
+#       remote = rpc.connect(host, port)
        reconfig_runtime(remote)
 
        print ('')
