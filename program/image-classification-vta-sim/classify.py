@@ -222,7 +222,8 @@ if host=='':
 
 port = os.environ.get('CK_MACHINE_PORT','')
 if port=='':
-   port = int(os.environ.get("VTA_PYNQ_RPC_PORT", "9091"))
+   port = os.environ.get("VTA_PYNQ_RPC_PORT", "9091")
+port=int(port)
 
 # We configure both the bitstream and the runtime system on the Pynq
 # to match the VTA configuration specified by the config.json file.
