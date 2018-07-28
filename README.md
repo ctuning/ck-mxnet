@@ -6,39 +6,22 @@
 
 ## Introduction
 
-This repository provides high-level, portable and customizable workflows
-for [MXNet](http://mxnet.incubator.apache.org) 
-as a part of our long-term community initiative
-to [unify and automate AI](http://cKnowledge.org/ai) 
-using [Collective Knowledge Framework (CK)](http://github.com/ctuning/ck/wiki).
-
-CK enables sharing of various AI engines and artifacts 
-as [reusable, customizable and portable components with a simple JSON API and meta information](http://cKnowledge.org/ai-artfacts)
-CK also helps researchers quickly prototype 
-[portable AI workflows](https://github.com/ctuning/ck/wiki/Portable-workflows)
-by assembling together CK components similar to LEGO(tm), 
-plugging in various versions of AI frameworks together with 
-different libraries, compilers, tools, models and data sets,
-and automating and customizing their installation across 
-Linux, Windows, MacOS and Android
-(see shared [CK repositories](https://github.com/ctuning/ck/wiki/Shared-repos),
-[modules](https://github.com/ctuning/ck/wiki/Shared-modules),
-[packages](https://github.com/ctuning/ck/wiki/Shared-packages) 
-and [software detection plugins](https://github.com/ctuning/ck/wiki/Shared-soft-descriptions)).
-
-Such portable workflows can now be crowdsourced 
-across diverse platforms from IoT to supercomputers provided by volunteers 
-to enable practical and collaborative benchmarking, optimization and co-design of 
-the whole AI stack (SW/HW/models) in terms of accuracy, execution time, power consumption, 
-resource usage and other costs (see [public open CK repository](http://cKnowledge.org/repo), 
-vision papers [1](https://arxiv.org/abs/1506.06256), [2](http://doi.acm.org/10.1145/2909437.2909449)
-and [reproducible and CK-powered AI/SW/HW co-design competitions at ACM/IEEE conferences](http://cKnowledge.org/request)).
+This repository provides high-level, portable and customizable Collective Knowledge workflows
+for [MXNet](http://mxnet.incubator.apache.org), TVM and VTA.
+It is a part of our long-term community initiative
+to unify and automate AI, ML and systems R&D
+using [Collective Knowledge Framework (CK)](http://cKnowledge.org),
+and to collaboratively co-design efficient SW/HW stack for AI/ML
+during open [ACM ReQuEST competitions](http://cKnowledge.org/request)
+as described in the [ACM ReQuEST report](https://portalparts.acm.org/3230000/3229762/fm/frontmatter.pdf).
+All benchmarking and optimization results are available 
+in a [public CK repository](http://cKnowledge.org/repo).
 
 ## Coordination of development
 
+* [University of Washnigton](http://www.washington.edu)
 * [cTuning Foundation](http://cTuning.org)
 * [dividiti](http://dividiti.com)
-* [University of Washnigton](http://www.washington.edu)
 
 ## Minimal CK installation
 
@@ -49,18 +32,18 @@ The minimal installation requires:
 
 ### Linux/MacOS
 
-You can install CK in your local user space as follows:
+You can install latest CK via PIP (with sudo on Linux) as follows:
+
+```
+$ sudo pip install ck
+```
+
+You can also install CK in your local user space without sudo as follows:
 
 ```
 $ git clone http://github.com/ctuning/ck
 $ export PATH=$PWD/ck/bin:$PATH
 $ export PYTHONPATH=$PWD/ck:$PYTHONPATH
-```
-
-You can also install CK via PIP with sudo to avoid setting up environment variables yourself:
-
-```
-$ sudo pip install ck
 ```
 
 ### Windows
@@ -130,31 +113,35 @@ $ ck run program:mxnet
 
 Skip --sudo if you have local Docker installation.
 
-## Next steps
-
-We plan to add unified compilation of MXNet via CK 
-with various libs on Linux, Windows, MacOS and Android
-similar to [ck-caffe](https://github.com/dividiti/ck-caffe), 
-[ck-caffe2](https://github.com/ctuning/ck-caffe2),
-[ck-tensorflow](https://github.com/ctuning/ck-tensorflow),
-[CK-PyTorch](https://github.com/ctuning/ck-pytorch)
-[ck-mvnc](https://github.com/ctuning/ck-mvnc)
-and [ck-cntk](https://github.com/ctuning/ck-cntk).
-
-We now have a proof-of-concept to unify AI engines and artifacts to perform collaborative AI/SW/HW benchmarking, 
-optimization and co-design to help researchers select the most efficient solutions for their experiments 
-(see our [public Collective Knowledge repo](http://cKnowledge.org/repo) 
-and [vision paper](https://arxiv.org/abs/1506.06256)). 
-Join [our long-term community initiative](http://cKnowledge.org/ai) 
-to crowdsource learning and AI/SW/HW co-design across billions of devices!
-
 ## Building from sources on ARM-based system (FireFly, RPi)
 
 ```
 $ ck install package:lib-mxnet-master-cpu --env.USE_F16C=0
 ```
 
-## Related Publications with long term vision
+## Using VTA (deep learning accelerator stack) via CK
+
+We provided CK workflows and programs for [VTA (the Versatile Tensor Accelerator)](https://docs.tvm.ai/vta/index.html)
+- an open, generic, and customizable deep learning accelerator with a complete TVM-based compiler stack.
+It successfully participated in the [1st ACM ReQuEST tournament](http://cknowledge.org/request-cfp-asplos2018.html) 
+(see [GitHub submission](https://github.com/ctuning/ck-request-asplos18-mobilenets-tvm-arm)
+and the [associated paper in the ACM DL](https://dl.acm.org/citation.cfm?doid=3229762.3229764))
+and we moved eventually moved it to this common ck-mxnet repository.
+
+### VTA with a Pynq FPGA board
+
+
+
+
+
+### VTA with a simulator
+
+If you don't have an FPGA board, you can use an integrated simulator on your host machine.
+
+
+
+
+## Related Publications
 
 ```
 @article{DBLP:journals/corr/ChenLLLWWXXZZ15,
@@ -171,17 +158,6 @@ $ ck install package:lib-mxnet-master-cpu --env.USE_F16C=0
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 
-@inproceedings{cm:29db2248aba45e59:cd11e3a188574d80,
-    url = {http://arxiv.org/abs/1506.06256},
-    title = {{Collective Mind, Part II: Towards Performance- and Cost-Aware Software Engineering as a Natural Science.}},
-    author = {Fursin, Grigori and Memon, Abdul and Guillon, Christophe and Lokhmotov, Anton},
-    booktitle = {{18th International Workshop on Compilers for Parallel Computing (CPC'15)}},
-    publisher = {ArXiv},
-    year = {2015},
-    month = January,
-    pdf = {http://arxiv.org/pdf/1506.06256v1}
-}
-
 @inproceedings{ck-date16,
     title = {{Collective Knowledge}: towards {R\&D} sustainability},
     author = {Fursin, Grigori and Lokhmotov, Anton and Plowman, Ed},
@@ -195,6 +171,4 @@ $ ck install package:lib-mxnet-master-cpu --env.USE_F16C=0
 
 ## Feedback
 
-Get in touch with CK-AI developers [here](https://github.com/ctuning/ck/wiki/Contacts). 
-Also feel free to engage with our community via this mailing list:
-* http://groups.google.com/group/collective-knowledge
+Get in touch with CK-AI developers [here](https://github.com/ctuning/ck/wiki/Contacts).
