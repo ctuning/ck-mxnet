@@ -8,13 +8,7 @@
     "url": "https://github.com/ctuning/ck-mxnet",
     "repo_deps": [
       {
-        "repo_uoa": "ck-autotuning"
-      },
-      {
-        "repo_uoa": "ck-math"
-      },
-      {
-        "repo_uoa": "ctuning-datasets-min"
+        "repo_uoa": "ck-tvm"
       }
     ]
   }
