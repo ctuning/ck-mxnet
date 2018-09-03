@@ -1,3 +1,5 @@
+2018.09.02 - [FGG] fixed MXNet installation from master branch with Lapack and extra Python deps
+
 2018.07.28 - [FGG] moved TVM/VTA to ck-tvm repo
 
 2018.07.26 - [FGG] fixing FPGA server

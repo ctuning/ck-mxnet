@@ -23,6 +23,7 @@
       "PACKAGE_URL_LINUX": "https://github.com/apache/incubator-mxnet.git", 
       "PYTHON_EXE": "python", 
       "USE_BLAS": "openblas", 
+      "USE_LAPACK": 1,
       "USE_OPENCV": 0,
       "MXNET_PACKAGE_VER": "master"
     }, 
@@ -45,9 +46,17 @@
     }, 
     "lib-openblas": {
       "local": "yes", 
+      "skip_default":"yes",
       "name": "Openblas library", 
       "sort": 11, 
       "tags": "lib,openblas"
+    },
+    "lib-lapack": {
+      "local": "yes", 
+      "skip_default":"yes",
+      "name": "Lapack library", 
+      "sort": 15, 
+      "tags": "lib,lapack"
     }
   }, 
   "end_full_path_universal": "src$#sep#$python$#sep#$mxnet$#sep#$__init__.py", 
