@@ -26,3 +26,11 @@ H:
 O: University of Washington
 C: inital discussion about collaborative AI/SW/HW co-design
 W:
+
+================================================================================
+N: Nikolay Chunosov
+E: 
+H: 
+O: Xored
+C: fixing OpenCV and deps for MXNet installation
+W:

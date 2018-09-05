@@ -28,6 +28,7 @@
     },
     "python-requests": {
       "local": "yes",
+      "skip_default":"yes",
       "name": "requests Python package",
       "sort": 30,
       "tags": "python-package,requests"
