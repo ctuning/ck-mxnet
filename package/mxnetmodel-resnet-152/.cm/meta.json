@@ -25,6 +25,12 @@
       "name": "Python",
       "sort": 20,
       "tags": "compiler,python"
+    },
+    "python-requests": {
+      "local": "yes",
+      "name": "requests Python package",
+      "sort": 30,
+      "tags": "python-package,requests"
     }
   },
   "end_full_path_universal": "synset.txt",
