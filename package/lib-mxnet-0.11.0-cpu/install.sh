@@ -41,10 +41,18 @@ echo ""
 EXTRA_PYTHON_SITE=${INSTALL_DIR}/lib
 mkdir -p ${EXTRA_PYTHON_SITE}
 
-${CK_ENV_COMPILER_PYTHON_FILE} -m pip install --ignore-installed decorator wget matplotlib jupyter opencv-python -t ${EXTRA_PYTHON_SITE}  ${SYS}
+${CK_ENV_COMPILER_PYTHON_FILE} -m pip install --ignore-installed decorator wget matplotlib jupyter -t ${EXTRA_PYTHON_SITE}  ${SYS}
 if [ "${?}" != "0" ] ; then
   echo "Error: installation failed!"
   exit 1
+fi
+
+if [ "${USE_OPENCV}" == "1" ] ; then
+  ${CK_ENV_COMPILER_PYTHON_FILE} -m pip install --ignore-installed opencv-python -t ${EXTRA_PYTHON_SITE}  ${SYS}
+  if [ "${?}" != "0" ] ; then
+    echo "Error: installation failed!"
+    exit 1
+  fi
 fi
 
 ######################################################################################
