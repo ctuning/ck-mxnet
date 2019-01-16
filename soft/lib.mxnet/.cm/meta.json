@@ -18,5 +18,6 @@
     "lib",
     "mxnet"
   ],
-  "template":"yes"
+  "template": "yes",
+  "template_type": "MXNet library"
 }

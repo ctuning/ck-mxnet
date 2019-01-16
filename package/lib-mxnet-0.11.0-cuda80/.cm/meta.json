@@ -2,19 +2,13 @@
   "customize": {
     "extra_dir": "",
     "install_env": {
-      "MXNET_PACKAGE_VER": "0.11.0",
       "MXNET_EXTRA": "-cu80",
-      "MXNET_GPU": "YES"
+      "MXNET_GPU": "YES",
+      "MXNET_PACKAGE_VER": "0.11.0"
     },
     "version": "0.11.0"
   },
   "deps": {
-    "python": {
-      "local": "yes",
-      "name": "Python",
-      "sort": 20,
-      "tags": "compiler,python"
-    },
     "compiler-cuda": {
       "local": "yes",
       "name": "CUDA compiler",
@@ -36,6 +30,12 @@
       "name": "cuDNN library",
       "sort": 40,
       "tags": "lib,cudnn"
+    },
+    "python": {
+      "local": "yes",
+      "name": "Python",
+      "sort": 20,
+      "tags": "compiler,python"
     }
   },
   "end_full_path_universal": "lib$#sep#$mxnet$#sep#$__init__.py",

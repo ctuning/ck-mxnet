@@ -28,8 +28,8 @@
     },
     "python-requests": {
       "local": "yes",
-      "skip_default":"yes",
       "name": "requests Python package",
+      "skip_default": "yes",
       "sort": 30,
       "tags": "python-package,requests"
     }
@@ -45,5 +45,6 @@
     "resnet-152",
     "channel-stable"
   ],
-  "template":"yes"
+  "template": "yes",
+  "template_type": "MXNet model - ResNet152"
 }

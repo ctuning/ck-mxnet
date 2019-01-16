@@ -6,22 +6,6 @@
   "process_in_tmp": "yes",
   "program": "yes",
   "run_cmds": {
-    "ipython": {
-      "ignore_return_code": "yes",
-      "run_deps": {
-        "lib-mxnet": {
-          "local": "yes",
-          "name": "MXNet library",
-          "no_tags": "vsrc",
-          "skip_pruning_by_other_deps": "yes",
-          "sort": 10,
-          "tags": "lib,mxnet"
-        }
-      },
-      "run_time": {
-        "run_cmd_main": "$<<CK_PYTHON_IPYTHON_BIN_FULL>>$"
-      }
-    },
     "classify-cpu": {
       "dataset_tags": [
         "image",
@@ -77,13 +61,29 @@
       "run_time": {
         "run_cmd_main": "$<<CK_ENV_COMPILER_PYTHON_FILE>>$ ../classify.py $#dataset_path#$$#dataset_filename#$ 1"
       }
+    },
+    "ipython": {
+      "ignore_return_code": "yes",
+      "run_deps": {
+        "lib-mxnet": {
+          "local": "yes",
+          "name": "MXNet library",
+          "no_tags": "vsrc",
+          "skip_pruning_by_other_deps": "yes",
+          "sort": 10,
+          "tags": "lib,mxnet"
+        }
+      },
+      "run_time": {
+        "run_cmd_main": "$<<CK_PYTHON_IPYTHON_BIN_FULL>>$"
+      }
     }
   },
-  "run_vars": {
-  },
+  "run_vars": {},
   "tags": [
     "mxnet-demo",
     "demo"
   ],
-  "template":"yes"
+  "template": "yes",
+  "template_type": "image classification via MXNet"
 }
