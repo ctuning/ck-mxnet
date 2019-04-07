@@ -22,6 +22,9 @@ in the [public CK repository](http://cKnowledge.org/repo).
 See [CK getting started guide](https://github.com/ctuning/ck/wiki/First-Steps)
 for more details about CK.
 
+## Maintainers
+* [dividiti](http://dividiti.com)
+
 ## Coordination of development
 
 * [University of Washnigton](http://www.washington.edu)
