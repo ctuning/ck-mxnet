@@ -1,6 +1,6 @@
 # Collective Knowledge repository for MXNet
 
-**All CK components for AI and ML are now collected in [one repository](https://github.com/ctuning/ai)!**
+**All CK components can be found at [cKnowledge.io](https://cKnowledge.io) and in [one GitHub repository](https://github.com/ctuning/ai)!**
 
 [![compatibility](https://github.com/ctuning/ck-guide-images/blob/master/ck-compatible.svg)](https://github.com/ctuning/ck)
 [![automation](https://github.com/ctuning/ck-guide-images/blob/master/ck-artifact-automated-and-reusable.svg)](http://cTuning.org/ae)
@@ -23,15 +23,6 @@ All benchmarking and optimization results are available
 in the [public CK repository](http://cKnowledge.org/repo).
 See [CK getting started guide](https://github.com/ctuning/ck/wiki/First-Steps)
 for more details about CK.
-
-## Maintainers
-* [dividiti](http://dividiti.com)
-
-## Coordination of development
-
-* [University of Washnigton](http://www.washington.edu)
-* [cTuning Foundation](http://cTuning.org)
-* [dividiti](http://dividiti.com)
 
 ## Minimal CK installation
 
@@ -114,9 +105,6 @@ You can start a virtual environment for a given MXNet package as follows:
 $ ck virtual env --tags=lib,mxnet
 > export | grep "CK_"
 ```
-
-See [this blog post](https://dividiti.blogspot.com/2018/07/enabling-virtual-environment-for.html)
-about CK virtual environment.
 
 ## Building from sources on ARM-based system (FireFly, RPi)
 

@@ -1,15 +1,16 @@
 {
-  "data_uoa": "ck-mxnet",
-  "data_uid": "678494f8b520000f",
   "data_alias": "ck-mxnet",
   "data_name": "ck-mxnet",
+  "data_uid": "678494f8b520000f",
+  "data_uoa": "ck-mxnet",
   "dict": {
-    "shared": "git",
-    "url": "https://github.com/ctuning/ck-mxnet",
+    "desc": "Portable/customizable installation and unified access to MXNet AI frameworks with different workflows and data sets (see the <a href=\"https://github.com/ctuning/ck-request-asplos18-mobilenets-tvm-arm\">use case</a> from ReQuEST tournament).",
     "repo_deps": [
       {
         "repo_uoa": "ck-tvm"
       }
-    ]
+    ],
+    "shared": "git",
+    "url": "https://github.com/ctuning/ck-mxnet"
   }
 }
